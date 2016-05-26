@@ -1,4 +1,9 @@
 #home {
+  h1.entry-title {
+    color: $gold;
+    font: bold 6.5em $headerFont;
+    letter-spacing: 5px;
+  }
 
   .fullscreen-video {
     position: relative;
@@ -8,5 +13,33 @@
     left: 0;
     overflow: hidden;
     z-index: -100;
+  }
+
+  .home--content {
+    width: 52vw;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+
+    p {
+      color: $white;
+      font: italic 1.1em 'HelveticaNeue';
+      letter-spacing: 1px;
+      text-transform: none;
+    }
+
+    span {
+      border-top: 1px solid $white;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 6px;
+      margin-top: 12px;
+      margin-right: 10px;
+      display: inline-block;
+      float: left;
+    }
   }
 }

@@ -3,7 +3,10 @@
   src: url("././assets/fonts/BebasNeue Regular.otf"); }
 @font-face {
   font-family: HelveticaNeue;
-  src: url("././assets/fonts/HelveticaNeueLTStd.ttf"); }
+  src: url("././assets/fonts/HelveticaNeueLTStd-Lt.otf"); }
+@font-face {
+  font-family: HNBold;
+  src: url("././assets/fonts/HelveticaNeueLTStd-Bd.otf"); }
 /* DEFAULT COLORS / FONTS
 ============================================= */
 /* REGULAR MIXINS
@@ -13,6 +16,49 @@
 body {
   font-family: "HelveticaNeue", Verdana, sans-serif; }
 
+h1 {
+  font-family: "Bebas", Geneva, sans-serif; }
+
+#fgsnav {
+  position: absolute;
+  right: 50px;
+  top: 80px;
+  z-index: 1000;
+  background: transparent;
+  border: 0px solid transparent; }
+  #fgsnav ul li a {
+    border-bottom: 2px solid #fff;
+    padding: 15px 30px; }
+    #fgsnav ul li a span {
+      font-size: .8em;
+      font-family: "HelveticaNeue", Verdana, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #fff;
+      display: block;
+      position: relative;
+      white-space: nowrap;
+      transition: transform 0.3s;
+      visibility: visible; }
+      #fgsnav ul li a span::before {
+        display: block;
+        position: absolute;
+        top: 20px;
+        content: attr(data-hover);
+        height: 100%;
+        width: 100%;
+        font-family: "HNBold", Verdana, sans-serif;
+        visibility: hidden; }
+    #fgsnav ul li a:hover span {
+      transform: translateY(-20px);
+      visibility: hidden; }
+      #fgsnav ul li a:hover span::before {
+        visibility: visible; }
+
+#home h1.entry-title {
+  color: #DAA520;
+  font: bold 6.5em "Bebas", Geneva, sans-serif;
+  letter-spacing: 5px; }
 #home .fullscreen-video {
   position: relative;
   top: 0;
@@ -21,5 +67,27 @@ body {
   left: 0;
   overflow: hidden;
   z-index: -100; }
+#home .home--content {
+  width: 52vw;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50; }
+  #home .home--content p {
+    color: #fff;
+    font: italic 1.1em 'HelveticaNeue';
+    letter-spacing: 1px;
+    text-transform: none; }
+  #home .home--content span {
+    border-top: 1px solid #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 6px;
+    margin-top: 12px;
+    margin-right: 10px;
+    display: inline-block;
+    float: left; }
 
 /*# sourceMappingURL=style.css.map */

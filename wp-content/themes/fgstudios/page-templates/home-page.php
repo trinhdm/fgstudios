@@ -10,16 +10,14 @@
 	<main id="main" class="site-main" role="main">
     <div id="home">
     <?php while ( have_posts() ) : the_post(); ?>
-      <header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-      </header>
-
       <div class="fullscreen-video">
       </div>
 
+        <div class="home--content">
+          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <span></span><?php the_content(); ?>
+        </div>
 
-
-          <?php the_content(); ?>
       </div><!-- .entry-content -->
     </main>
   </div>

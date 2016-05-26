@@ -7,7 +7,12 @@
 
 @font-face {
   font-family: HelveticaNeue;
-  src: url("././assets/fonts/HelveticaNeueLTStd.ttf");
+  src: url("././assets/fonts/HelveticaNeueLTStd-Lt.otf");
+}
+
+@font-face {
+  font-family: HNBold;
+  src: url("././assets/fonts/HelveticaNeueLTStd-Bd.otf");
 }
 
 
@@ -20,14 +25,11 @@ $dark-gray: #888;
 $red: #c44741;
 $white: #fff;
 
-$link-hover: rgba(77,28,25,.9); // same as #c44741 but lower opacity
-
-$mainColor: $black;
-$secondColor: $white;
-$thirdColor: $light-gray;
+$gold: #DAA520;
 
 $headerFont: 'Bebas', Geneva, sans-serif;
 $bodyFont: 'HelveticaNeue', Verdana, sans-serif;
+$bodyFontBold: 'HNBold', Verdana, sans-serif;
 
 
 
