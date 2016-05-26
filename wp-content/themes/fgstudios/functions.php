@@ -118,6 +118,7 @@ add_action( 'widgets_init', 'fgstudios_widgets_init' );
 
  require "functions/css-js.php" ;
  require "functions/nav.php" ;
+ require "functions/backend.php" ;
 
 
 

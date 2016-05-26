@@ -19,8 +19,7 @@
         display: block;
         position: absolute;
         left: 0;
-        -webkit-transition: .5s ease;
-        transition: .5s ease;
+        @include transition(.5s ease);
       }
 
       &:hover {
@@ -38,7 +37,7 @@
         display: block;
         position: relative;
         white-space: nowrap;
-        transition: transform 0.3s;
+        @include transition(transform 0.3s);
         visibility: visible;
 
         &::before {

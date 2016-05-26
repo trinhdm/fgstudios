@@ -1,0 +1,33 @@
+.site-info {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  color: $white;
+  opacity: .6;
+  z-index: 50;
+
+  font-size: .7em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: right;
+
+  a {
+    color: $white;
+    display: inline-block;
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    @include transition(all .3s ease-out);
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  .fa {
+    font-size: 16px;
+    padding-left: 5px;
+  }
+}

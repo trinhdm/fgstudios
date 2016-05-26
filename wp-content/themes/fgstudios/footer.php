@@ -15,9 +15,19 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fgstudios' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'fgstudios' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'fgstudios' ), 'fgstudios', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<p>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-youtube"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</p>
+			<p><a href="#">Privacy Policy</a>
+			<a href="#">Terms of Use</a>
+			<a href="#">Career</a>
+			<a href="#">FgOfficial</a></p>
+
+			<p>(c) 2016 Foregroundstudios.net. All Rights Reserved.</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

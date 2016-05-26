@@ -28,6 +28,7 @@
       font: italic 1.1em 'HelveticaNeue';
       letter-spacing: 1px;
       text-transform: none;
+      opacity: .8;
     }
 
     span {
@@ -40,6 +41,44 @@
       margin-right: 10px;
       display: inline-block;
       float: left;
+      opacity: .8;
+    }
+  }
+
+  .home--button {
+    border-radius: 0;
+    border: 2px solid $white;
+    padding: 20px 30px;
+    margin-top: 40px;
+    // width:100%;
+    display: block;
+    background: transparent;
+    background-image: linear-gradient(to left,
+        transparent,
+        transparent 50%,
+        #fff 50%,
+        #fff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+
+    &:hover {
+      background-position: 0 0;
+
+      p {
+        color: $black !important;
+        @include transition(color .3s ease);
+      }
+    }
+
+    p:not(.fa) {
+      color: $white;
+      font: bold 1.05em $bodyFont;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: 1;
+      display: inline-block;
+      margin: 0;
     }
   }
 }
