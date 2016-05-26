@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Bebas;
+  src: url("././assets/fonts/BebasNeue Regular.otf");
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("././assets/fonts/HelveticaNeueLTStd.ttf");
+}
+
+
+/* DEFAULT COLORS / FONTS
+============================================= */
+
+$black: #000;
+$light-gray:  #eee;
+$dark-gray: #888;
+$red: #c44741;
+$white: #fff;
+
+$link-hover: rgba(77,28,25,.9); // same as #c44741 but lower opacity
+
+$mainColor: $black;
+$secondColor: $white;
+$thirdColor: $light-gray;
+
+$headerFont: 'Bebas', Geneva, sans-serif;
+$bodyFont: 'HelveticaNeue', Verdana, sans-serif;
+
+
+
+/* REGULAR MIXINS
+============================================= */
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+/* MIXINS FOR RESPONSIVE DESIGN
+============================================= */
+
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-under {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}

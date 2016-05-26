@@ -1,5 +1,18 @@
-#home .entry-title {
-  display: none; }
+@font-face {
+  font-family: Bebas;
+  src: url("././assets/fonts/BebasNeue Regular.otf"); }
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("././assets/fonts/HelveticaNeueLTStd.ttf"); }
+/* DEFAULT COLORS / FONTS
+============================================= */
+/* REGULAR MIXINS
+============================================= */
+/* MIXINS FOR RESPONSIVE DESIGN
+============================================= */
+body {
+  font-family: "HelveticaNeue", Verdana, sans-serif; }
+
 #home .fullscreen-video {
   position: relative;
   top: 0;

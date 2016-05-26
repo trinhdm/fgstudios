@@ -152,6 +152,8 @@
 
 
 <script>
-var options = { videoId: 'RGaxriJ4Iko', start: 1 };
+jQuery(document).ready(function( $ ) {
+    var options = { videoId: 'RGaxriJ4Iko', start: 1 };
     $('.fullscreen-video').tubular(options);
+  });
     </script>

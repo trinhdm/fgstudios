@@ -8,6 +8,7 @@
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+    <div id="home">
     <?php while ( have_posts() ) : the_post(); ?>
       <header class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -20,6 +21,8 @@
 
           <?php the_content(); ?>
       </div><!-- .entry-content -->
+    </main>
+  </div>
 
 <?php endwhile; // end of the loop. ?>
 
