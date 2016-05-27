@@ -2,11 +2,22 @@ body {
   font-family: $bodyFont;
 }
 
-
 h1 {
   font-family: $headerFont;
 }
 
 .site-branding, .screen-reader-text {
   display: none;
+}
+
+.animate-delay1 {
+  -webkit-animation-delay: 3s;
+}
+
+.animate-delay2 {
+  -webkit-animation-delay: 3.5s;
+}
+
+.animate-delay3 {
+  -webkit-animation-delay: 3.7s;
 }

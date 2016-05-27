@@ -1,15 +1,57 @@
+.logo--header {
+  position: absolute;
+  left: 50px;
+  top: 35px;
+  z-index: 200;
+
+  @include phone {
+    left: 5px;
+    top: 5px;
+  }
+
+  img {
+    height: 90px;
+    width: auto;
+
+    @include phone {
+      height: 65px;
+    }
+  }
+}
+
 #fgsnav {
   position: absolute;
   right: 50px;
-  top: 80px;
+  top: 50px;
   z-index: 1000;
   background: transparent;
   border: 0px solid transparent;
 
+  @include phone {
+    top: 10px;
+    right: 0;
+  }
+
+  @include tablet {
+    top: 10px;
+    right: 10px;
+  }
+
   ul {
+    @include phone {
+      width: 100vw;
+      height: 100vh;
+      background: $black;
+      opacity: .9;
+    }
+
     li a {
       border-bottom: 2px solid #fff;
       padding: 15px 30px;
+      
+      @include phone {
+        opacity: .8;
+      }
 
       &::after {
         content: '';
@@ -63,5 +105,28 @@
         }
       }
     }
+  }
+
+  .navbar-default .navbar-collapse {
+    border-color: transparent;
+  }
+
+  .navbar-collapse {
+    box-shadow: inset 0 0 0 rgba(255,255,255,0);
+    border-color: transparent;
+  }
+
+  .navbar-default .navbar-toggle {
+    border: transparent;
+  }
+
+  .navbar-toggle {
+    background-color: $white;
+    opacity: .8;
+    margin-right: 20px;
+  }
+
+  .icon-bar {
+    background-color: $gold;;
   }
 }

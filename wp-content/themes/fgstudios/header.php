@@ -41,8 +41,10 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
+
+		<div class="logo--header"><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>"></div>
 		<div id="header">
-		<nav class="navbar navbar-default fixed-bot" id="fgsnav">
+		<nav class="navbar navbar-default animated fadeInDown animate-delay3" id="fgsnav">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -52,8 +54,6 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-
-
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->

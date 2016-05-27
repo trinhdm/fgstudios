@@ -1,0 +1,160 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("./assets/fonts/HelveticaNeueLTStd-Lt.otf");
+}
+
+body {
+  background-color: #fff;
+  font-family: 'HelveticaNeue';
+}
+
+html {
+  margin-top: 0 !important;
+}
+
+img#landing-logo {
+  height: auto;
+  width: 275px;
+  margin: 25px auto;
+  display: block;
+}
+
+.navbar-default {
+  background: rgba(255,255,255,.5);
+  border-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-default {
+    background: rgba(255,255,255,.5);
+  }
+}
+
+.fa {
+  margin-right: 10px;
+  opacity: .8;
+  font-size: 1.8em;
+}
+
+a:hover {
+  border: 0;
+  text-decoration: none;
+}
+
+.landing-intro {
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  width: 300px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+}
+
+#landing-clothing a, #landing-studios a {
+  color: #fff;
+}
+
+#landing-clothing p, #landing-studios p {
+  font: 1.65em 'HelveticaNeue';
+  color: #fff;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 20px 30px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover {
+  transform: scale(.85);
+  -ms-transform: scale(.85);
+  -webkit-transform: scale(.85);
+}
+
+#landing-clothing {
+  background: linear-gradient(
+    rgba(0,0,0,.4),
+    rgba(0,0,0,.4)
+    ), url('/wp-content/uploads/2016/05/landing-page1.png');
+  background-size: 110% 110%;
+  background-position: 60% 20%;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+#landing-studios {
+  background: linear-gradient(
+    rgba(0,0,0,.4),
+    rgba(0,0,0,.4)
+    ), url('/wp-content/uploads/2016/02/Chris-Lee-HK_causewaybay.jpg');
+  background-size: 120% 120%;
+  background-position: 30% 20%;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+.btn {
+  /*width: 48%;*/
+  border-radius: 0px;
+}
+
+.btn-default {
+  background-color: #c44741;
+  border: 0px solid transparent;
+  color: #eee;
+  font: 9pt 'HelveticaNeue', Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 9px 16px;
+  margin-left: 7px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn-default {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-default {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.btn-default:hover, .btn-default:focus {
+  background-color: #000;
+  color: #eee;
+  -webkit-transition: background-color .5s ease;
+  -moz-transition: background-color .5s ease;
+  -ms-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+.form-control {
+  border-radius: 0px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  box-shadow: inset 0 0 0 rgba(0,0,0,.075);
+  text-align: right;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-control {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  font-family: 'HelveticaNeue';
+  font-size: .8em;
+  text-transform: capitalize;
+  opacity: 1px;
+  letter-spacing: 1px;
+  text-align: center;
+}

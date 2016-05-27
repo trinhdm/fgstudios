@@ -40,8 +40,8 @@ add_action( 'init', 'enqueue_js' );
 
 
 function enqueue_css() {
-	// wp_register_style( 'animate', get_template_directory_uri() . '/assets/css/animate.css' );
-	// wp_enqueue_style( 'animate' );
+	wp_register_style( 'animate', get_template_directory_uri() . '/assets/css/animate.css' );
+	wp_enqueue_style( 'animate' );
 
 	wp_register_style( 'bootstrap.min', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap.min' );

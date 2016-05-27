@@ -22,16 +22,58 @@ h1 {
 .site-branding, .screen-reader-text {
   display: none; }
 
+.animate-delay1 {
+  -webkit-animation-delay: 3s; }
+
+.animate-delay2 {
+  -webkit-animation-delay: 3.5s; }
+
+.animate-delay3 {
+  -webkit-animation-delay: 3.7s; }
+
+.logo--header {
+  position: absolute;
+  left: 50px;
+  top: 35px;
+  z-index: 200; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .logo--header {
+      left: 5px;
+      top: 5px; } }
+  .logo--header img {
+    height: 90px;
+    width: auto; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .logo--header img {
+        height: 65px; } }
+
 #fgsnav {
   position: absolute;
   right: 50px;
-  top: 80px;
+  top: 50px;
   z-index: 1000;
   background: transparent;
   border: 0px solid transparent; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #fgsnav {
+      top: 10px;
+      right: 0; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #fgsnav {
+      top: 10px;
+      right: 10px; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #fgsnav ul {
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      opacity: .9; } }
   #fgsnav ul li a {
     border-bottom: 2px solid #fff;
     padding: 15px 30px; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #fgsnav ul li a {
+        opacity: .8; } }
     #fgsnav ul li a::after {
       content: '';
       border-bottom: 4px solid #fff;
@@ -76,11 +118,24 @@ h1 {
       visibility: hidden; }
       #fgsnav ul li a:hover span::before {
         visibility: visible; }
+  #fgsnav .navbar-default .navbar-collapse {
+    border-color: transparent; }
+  #fgsnav .navbar-collapse {
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0);
+    border-color: transparent; }
+  #fgsnav .navbar-default .navbar-toggle {
+    border: transparent; }
+  #fgsnav .navbar-toggle {
+    background-color: #fff;
+    opacity: .8;
+    margin-right: 20px; }
+  #fgsnav .icon-bar {
+    background-color: #DAA520; }
 
 .site-info {
   position: absolute;
-  bottom: 0;
-  right: 20px;
+  bottom: 1%;
+  right: 1%;
   color: #fff;
   opacity: .6;
   z-index: 50;
@@ -107,10 +162,290 @@ h1 {
     font-size: 16px;
     padding-left: 5px; }
 
+.loader--logo {
+  z-index: 1000;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 350px; }
+  .loader--logo img {
+    width: 350px;
+    height: auto; }
+
+.animate-delay-logo-loader {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2.5s; }
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; }
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 1001; }
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #DAA520;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #bbb;
+  -webkit-animation: spin 1.5s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */ }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */ } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */ }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */ } }
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+  -webkit-transform: translateX(0);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0);
+  /* IE 9 */
+  transform: translateX(0);
+  /* Firefox 16+, IE 10+, Opera */ }
+
+#loader-wrapper .loader-section.section-left {
+  left: 0; }
+
+#loader-wrapper .loader-section.section-right {
+  right: 0; }
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out; }
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none; }
+
+.no-js h1 {
+  color: #222222; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/*
+	Ok so you have made it this far, that means you are very keen to on my code.
+	Anyway I don't really mind it. This is a great way to learn so you actually doing the right thing:)
+	Follow me @ihatetomatoes
+*/
 #home h1.entry-title {
   color: #DAA520;
   font: bold 6.5em "Bebas", Geneva, sans-serif;
   letter-spacing: 5px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #home h1.entry-title {
+      font-size: 3.25em; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #home h1.entry-title {
+      font-size: 5.5em; } }
+#home .color-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0; }
 #home .fullscreen-video {
   position: relative;
   top: 0;
@@ -126,13 +461,23 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 50; }
-  #home .home--content p {
+  @media (min-width: 320px) and (max-width: 767px) {
+    #home .home--content {
+      left: 10px;
+      width: 100vw;
+      top: 30%;
+      transform: translateY(-30%); } }
+  #home .home--content p:not(.home--button) {
     color: #fff;
     font: italic 1.1em 'HelveticaNeue';
     letter-spacing: 1px;
     text-transform: none;
+    margin: 0;
     opacity: .8; }
-  #home .home--content span {
+    @media (min-width: 320px) and (max-width: 767px) {
+      #home .home--content p:not(.home--button) {
+        font-size: .95em; } }
+  #home .home--content span.line {
     border-top: 1px solid #fff;
     top: 50%;
     transform: translateY(-50%);
@@ -143,20 +488,27 @@ h1 {
     display: inline-block;
     float: left;
     opacity: .8; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #home .home--content span.line {
+        display: none; } }
 #home .home--button {
   border-radius: 0;
   border: 2px solid #fff;
-  padding: 20px 30px;
+  padding: 20px 32px;
   margin-top: 40px;
+  opacity: 1 !important;
   display: block;
   background: transparent;
   background-image: linear-gradient(to left, transparent, transparent 50%, #fff 50%, #fff);
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all .25s ease-in; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #home .home--button {
+      padding: 12px 22px; } }
   #home .home--button:hover {
     background-position: 0 0; }
-    #home .home--button:hover p {
+    #home .home--button:hover p, #home .home--button:hover i {
       color: #000 !important;
       -webkit-transition: color 0.3s ease;
       -moz-transition: color 0.3s ease;
@@ -168,7 +520,7 @@ h1 {
     font: bold 1.05em "HelveticaNeue", Verdana, sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    opacity: 1;
+    opacity: 1 !important;
     display: inline-block;
     margin: 0; }
 

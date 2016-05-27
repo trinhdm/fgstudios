@@ -3,6 +3,31 @@
     color: $gold;
     font: bold 6.5em $headerFont;
     letter-spacing: 5px;
+
+    @include phone {
+      font-size: 3.25em;
+    }
+
+    @include tablet {
+      font-size: 5.5em;
+    }
+  }
+
+  .color-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
   }
 
   .fullscreen-video {
@@ -23,15 +48,27 @@
     transform: translateY(-50%);
     z-index: 50;
 
-    p {
+    @include phone {
+      left: 10px;
+      width: 100vw;
+      top: 30%;
+      transform: translateY(-30%);
+    }
+
+    p:not(.home--button) {
       color: $white;
       font: italic 1.1em 'HelveticaNeue';
       letter-spacing: 1px;
       text-transform: none;
+      margin: 0;
       opacity: .8;
+
+      @include phone {
+        font-size: .95em;
+      }
     }
 
-    span {
+    span.line {
       border-top: 1px solid $white;
       top: 50%;
       transform: translateY(-50%);
@@ -42,15 +79,19 @@
       display: inline-block;
       float: left;
       opacity: .8;
+
+      @include phone {
+        display: none;
+      }
     }
   }
 
   .home--button {
     border-radius: 0;
     border: 2px solid $white;
-    padding: 20px 30px;
+    padding: 20px 32px;
     margin-top: 40px;
-    // width:100%;
+    opacity: 1 !important;
     display: block;
     background: transparent;
     background-image: linear-gradient(to left,
@@ -62,10 +103,14 @@
     background-size: 200% 100%;
     transition: all .25s ease-in;
 
+    @include phone {
+      padding: 12px 22px;
+    }
+
     &:hover {
       background-position: 0 0;
 
-      p {
+      p, i {
         color: $black !important;
         @include transition(color .3s ease);
       }
@@ -76,7 +121,7 @@
       font: bold 1.05em $bodyFont;
       text-transform: uppercase;
       letter-spacing: 3px;
-      opacity: 1;
+      opacity: 1 !important;
       display: inline-block;
       margin: 0;
     }
