@@ -1,0 +1,26 @@
+@import "../base/includes";
+
+.animate-delay3 {
+  @include animation-delay(0s);
+}
+
+#fgsnav {
+  ul {
+    li a {
+      border-bottom: 2px solid $black;
+      padding: 15px 30px;
+
+      &:active::after, .navlink-active::after {
+        border-bottom: 4px solid $black;
+      }
+
+      &::after {
+        border-bottom: 4px solid $black;
+      }
+
+      span {
+        color: $black;
+      }
+    }
+  }
+}

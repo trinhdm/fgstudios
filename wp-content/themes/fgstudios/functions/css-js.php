@@ -54,6 +54,17 @@ function enqueue_css() {
 add_action( 'wp_enqueue_scripts', 'enqueue_css' );
 
 
+function register_more_stylesheets() {
+    wp_register_style( 'stylesheet_name', get_stylesheet_directory_uri() . '/assets/css/portfolio.css' );
+}
+function add_my_stylesheet() {
+    if ( is_page('portfolio') ) // using page slug
+    wp_enqueue_style( 'stylesheet_name' );  // no brackets needed for one line and no else
+}
+add_action( 'init', 'register_more_stylesheets' ); // should I use wp_print_styles hook instead?
+add_action( 'wp_enqueue_scripts', 'add_my_stylesheet' );
+
+
 
 // registers custom nav menu
 $bspath = $_SERVER['DOCUMENT_ROOT'];

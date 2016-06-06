@@ -46,9 +46,9 @@
     }
 
     li a {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid $white;
       padding: 15px 30px;
-      
+
       @include phone {
         opacity: .8;
       }

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Bebas;
+  src: url("././assets/fonts/BebasNeue Regular.otf"); }
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("././assets/fonts/HelveticaNeueLTStd-Lt.otf"); }
+@font-face {
+  font-family: HNBold;
+  src: url("././assets/fonts/HelveticaNeueLTStd-Bd.otf"); }
+/* DEFAULT COLORS / FONTS
+============================================= */
+/* REGULAR MIXINS
+============================================= */
+/* MIXINS FOR RESPONSIVE DESIGN
+============================================= */
+.animate-delay3 {
+  -moz-animation-delay: 0s;
+  /* Firefox */
+  -webkit-animation-delay: 0s;
+  /* Safari and Chrome */
+  -o-animation-delay: 0s;
+  /* Opera */
+  animation-delay: 0s; }
+
+#fgsnav ul li a {
+  border-bottom: 2px solid #000;
+  padding: 15px 30px; }
+  #fgsnav ul li a:active::after, #fgsnav ul li a .navlink-active::after {
+    border-bottom: 4px solid #000; }
+  #fgsnav ul li a::after {
+    border-bottom: 4px solid #000; }
+  #fgsnav ul li a span {
+    color: #000; }
+
+/*# sourceMappingURL=portfolio.css.map */
