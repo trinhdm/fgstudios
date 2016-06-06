@@ -11,13 +11,13 @@ h1 {
 }
 
 .animate-delay1 {
-  -webkit-animation-delay: 3s;
+  @include animation-delay(3.5s);
 }
 
 .animate-delay2 {
-  -webkit-animation-delay: 3.5s;
+  @include animation-delay(4s);
 }
 
 .animate-delay3 {
-  -webkit-animation-delay: 3.7s;
+  @include animation-delay(4.2s);
 }

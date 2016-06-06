@@ -26,6 +26,9 @@ function enqueue_js() {
 	// wp_register_script('init', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
 	// wp_enqueue_script('init');
   //
+  wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array('jquery'));
+  wp_enqueue_script('modernizr');
+
 	// wp_register_script('wowjs', get_template_directory_uri() . '/assets/js/wow.js', array('jquery'));
 	// wp_enqueue_script('wowjs');
   //

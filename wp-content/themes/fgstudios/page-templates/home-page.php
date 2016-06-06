@@ -9,8 +9,9 @@
 <style>
 /* prevents scrolling on mobile*/
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
+
 body {
   position: relative
 }
@@ -59,7 +60,7 @@ jQuery(document).ready(function( $ ) {
 
 	setTimeout(function(){
 		$('body').addClass('loaded');
-	}, 3000);
+	}, 3300);
 
 });
 </script>

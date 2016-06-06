@@ -5,15 +5,23 @@
   margin: 0 auto;
   width: 350px;
 
+  @include phone {
+    width: 275px;
+  }
+
   img {
     width: 350px;
     height: auto;
+
+    @include phone {
+      width: 275px;
+    }
   }
 }
 
 .animate-delay-logo-loader {
-  -webkit-animation-duration: 1s;
-  -webkit-animation-delay: 2.5s;
+  @include animation-duration(1s);
+  @include animation-delay(3s);
 }
 
 #loader-wrapper {

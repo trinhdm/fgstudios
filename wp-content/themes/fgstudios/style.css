@@ -23,13 +23,31 @@ h1 {
   display: none; }
 
 .animate-delay1 {
-  -webkit-animation-delay: 3s; }
+  -moz-animation-delay: 3.5s;
+  /* Firefox */
+  -webkit-animation-delay: 3.5s;
+  /* Safari and Chrome */
+  -o-animation-delay: 3.5s;
+  /* Opera */
+  animation-delay: 3.5s; }
 
 .animate-delay2 {
-  -webkit-animation-delay: 3.5s; }
+  -moz-animation-delay: 4s;
+  /* Firefox */
+  -webkit-animation-delay: 4s;
+  /* Safari and Chrome */
+  -o-animation-delay: 4s;
+  /* Opera */
+  animation-delay: 4s; }
 
 .animate-delay3 {
-  -webkit-animation-delay: 3.7s; }
+  -moz-animation-delay: 4.2s;
+  /* Firefox */
+  -webkit-animation-delay: 4.2s;
+  /* Safari and Chrome */
+  -o-animation-delay: 4.2s;
+  /* Opera */
+  animation-delay: 4.2s; }
 
 .logo--header {
   position: absolute;
@@ -168,13 +186,31 @@ h1 {
   position: relative;
   margin: 0 auto;
   width: 350px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .loader--logo {
+      width: 275px; } }
   .loader--logo img {
     width: 350px;
     height: auto; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .loader--logo img {
+        width: 275px; } }
 
 .animate-delay-logo-loader {
+  -moz-animation-duration: 1s;
+  /* Firefox */
   -webkit-animation-duration: 1s;
-  -webkit-animation-delay: 2.5s; }
+  /* Safari and Chrome */
+  -o-animation-duration: 1s;
+  /* Opera */
+  animation-duration: 1s;
+  -moz-animation-delay: 3s;
+  /* Firefox */
+  -webkit-animation-delay: 3s;
+  /* Safari and Chrome */
+  -o-animation-delay: 3s;
+  /* Opera */
+  animation-delay: 3s; }
 
 #loader-wrapper {
   position: fixed;
@@ -429,6 +465,12 @@ h1 {
   color: #DAA520;
   font: bold 6.5em "Bebas", Geneva, sans-serif;
   letter-spacing: 5px; }
+@-moz-document url-prefix() {
+  #home h1.entry-title {
+    font-size: 6em; } }
+  @supports (-ms-accelerator: true) {
+    #home h1.entry-title {
+      font-size: 6em; } }
   @media (min-width: 320px) and (max-width: 767px) {
     #home h1.entry-title {
       font-size: 3.25em; } }
@@ -461,6 +503,9 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 50; }
+  @media screen and (min-width: 1600px) {
+    #home .home--content {
+      width: 700px; } }
   @media (min-width: 320px) and (max-width: 767px) {
     #home .home--content {
       left: 10px;

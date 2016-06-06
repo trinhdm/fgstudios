@@ -44,6 +44,20 @@ $bodyFontBold: 'HNBold', Verdana, sans-serif;
   transition: $args;
 }
 
+@mixin animation-delay($args) {
+  -moz-animation-delay: $args; /* Firefox */
+  -webkit-animation-delay: $args; /* Safari and Chrome */
+  -o-animation-delay: $args; /* Opera */
+  animation-delay: $args;
+}
+
+@mixin animation-duration($args) {
+  -moz-animation-duration: $args; /* Firefox */
+  -webkit-animation-duration: $args; /* Safari and Chrome */
+  -o-animation-duration: $args; /* Opera */
+  animation-duration: $args;
+}
+
 
 /* MIXINS FOR RESPONSIVE DESIGN
 ============================================= */

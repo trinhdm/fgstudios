@@ -42,7 +42,7 @@
 		</div><!-- .site-branding -->
 
 
-		<div class="logo--header"><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>"></div>
+		<div class="logo--header animated fadeInDown animate-delay3"><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>"></div>
 		<div id="header">
 		<nav class="navbar navbar-default animated fadeInDown animate-delay3" id="fgsnav">
 		  <div class="container-fluid">

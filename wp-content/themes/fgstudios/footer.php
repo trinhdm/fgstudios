@@ -24,7 +24,7 @@
 			</p>
 			<p><a href="#">Privacy Policy</a>
 			<a href="#">Terms of Use</a>
-			<a href="#">Career</a>
+			<a href="#">Careers</a>
 			<a href="#">FgOfficial</a></p>
 
 			<p>(c) 2016 Foregroundstudios.net. All Rights Reserved.</p>
