@@ -95,7 +95,7 @@
         color: $black;
         display: inline-block;
         text-transform: uppercase;
-        padding: 26px 0 5px;
+        padding: 20px 0 5px;
         margin: 0 10px;
         text-decoration: none;
 
@@ -115,9 +115,12 @@
     h2 {
       font-size: 26px;
       color: $gray;
+      background: rgba(255, 207, 207, .4);
       text-transform: uppercase;
       letter-spacing: 2px;
+      display: inline-block;
       margin: 15px 0;
+      padding: 1px;
     }
 
     #films--main, #photos--main, #designs--main {
@@ -125,7 +128,7 @@
     }
 
     .spacing {
-      margin: 10px 0 10px 0;
+      margin: 10px 0 20px 0;
     }
 
     .portfolio-display {
@@ -146,11 +149,13 @@
     padding: 0 0 0 45px;
 
     span {
-      padding: 7px 20px;
-      display: inline-block;
-      text-transform: uppercase;
       color: $gray;
+      background: rgba(255, 207, 207, .4);
+      text-transform: uppercase;
       letter-spacing: 2px;
+      margin: 7px 20px;
+      padding: 1px;
+      display: inline-block;
       vertical-align: bottom;
     }
 
@@ -181,6 +186,11 @@
 
     .arrow-show {
       display: inline-block;
+    }
+
+    #arrow--icon {
+      margin: 40px auto;
+      display: block;
     }
   }
 }

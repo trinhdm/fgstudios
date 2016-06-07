@@ -630,7 +630,7 @@ h1 {
         color: #000;
         display: inline-block;
         text-transform: uppercase;
-        padding: 26px 0 5px;
+        padding: 20px 0 5px;
         margin: 0 10px;
         text-decoration: none; }
         #portfolio #port--main #port--main-nav a:hover {
@@ -647,13 +647,16 @@ h1 {
     #portfolio #port--main h2 {
       font-size: 26px;
       color: #848484;
+      background: rgba(255, 207, 207, 0.4);
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin: 15px 0; }
+      display: inline-block;
+      margin: 15px 0;
+      padding: 1px; }
     #portfolio #port--main #films--main, #portfolio #port--main #photos--main, #portfolio #port--main #designs--main {
       margin: 3px; }
     #portfolio #port--main .spacing {
-      margin: 10px 0 10px 0; }
+      margin: 10px 0 20px 0; }
     #portfolio #port--main .portfolio-display {
       border: 1px solid rgba(132, 132, 132, 0.5);
       padding: 0;
@@ -666,11 +669,13 @@ h1 {
   #portfolio #port--nav {
     padding: 0 0 0 45px; }
     #portfolio #port--nav span {
-      padding: 7px 20px;
-      display: inline-block;
-      text-transform: uppercase;
       color: #848484;
+      background: rgba(255, 207, 207, 0.4);
+      text-transform: uppercase;
       letter-spacing: 2px;
+      margin: 7px 20px;
+      padding: 1px;
+      display: inline-block;
       vertical-align: bottom; }
     #portfolio #port--nav img {
       height: 45px;
@@ -691,6 +696,9 @@ h1 {
       display: none; }
     #portfolio #port--nav .arrow-show {
       display: inline-block; }
+    #portfolio #port--nav #arrow--icon {
+      margin: 40px auto;
+      display: block; }
 
 .affix-top, .affix {
   position: static; }

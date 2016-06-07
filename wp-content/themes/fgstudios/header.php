@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'fgstudios' ); ?></a>
 
@@ -45,6 +46,7 @@
 		<div class="logo--header animated fadeInDown animate-delay3"><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>"></div>
 		<div id="header">
 		<nav class="navbar navbar-default animated fadeInDown animate-delay3" id="fgsnav">
+			<span id="top"></span>
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">

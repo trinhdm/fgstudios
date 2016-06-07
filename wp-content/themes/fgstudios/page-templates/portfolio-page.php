@@ -67,7 +67,7 @@
        </div>
 
 
-         <div class="col-md-2 scrollspy" id="port--nav" data-spy="affix">
+         <div class="col-md-2" id="port--nav" data-spy="affix">
            <a href="#films--main"><div class="row">
              <img src="<?php echo get_template_directory_uri() . '/assets/img/film-icon.png' ?>"><span id="film-nav">Films</span>
              <div class="arrow arrow-show arrow-films"></div>
@@ -80,6 +80,11 @@
             <img src="<?php echo get_template_directory_uri() . '/assets/img/design-icon.png' ?>"><span id="design-nav">Design</span>
             <div class="arrow arrow-hide  arrow-designs"></div>
           </div></a>
+
+
+          <a href="#top">
+            <img id="arrow--icon" src="<?php echo get_template_directory_uri() . '/assets/img/arrow-icon.png' ?>">
+          </a>
          </div>
 
 
