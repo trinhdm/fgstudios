@@ -650,8 +650,10 @@ h1 {
       text-transform: uppercase;
       letter-spacing: 2px;
       margin: 15px 0; }
+    #portfolio #port--main #films--main, #portfolio #port--main #photos--main, #portfolio #port--main #designs--main {
+      margin: 3px; }
     #portfolio #port--main .spacing {
-      margin: 30px 0 10px 0; }
+      margin: 10px 0 10px 0; }
     #portfolio #port--main .portfolio-display {
       border: 1px solid rgba(132, 132, 132, 0.5);
       padding: 0;

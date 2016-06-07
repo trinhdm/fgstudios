@@ -68,18 +68,18 @@
 
 
          <div class="col-md-2 scrollspy" id="port--nav" data-spy="affix">
-           <div class="row">
+           <a href="#films--main"><div class="row">
              <img src="<?php echo get_template_directory_uri() . '/assets/img/film-icon.png' ?>"><span id="film-nav">Films</span>
              <div class="arrow arrow-show arrow-films"></div>
-           </div>
-           <div class="row middle">
+           </div></a>
+           <a href="#photos--main"><div class="row middle">
              <img src="<?php echo get_template_directory_uri() . '/assets/img/photo-icon.png' ?>"><span id="photo-nav">Photos</span>
              <div class="arrow arrow-hide arrow-photos"></div>
-           </div>
-           <div class="row">
+           </div></a>
+           <a href="#designs--main"><div class="row">
             <img src="<?php echo get_template_directory_uri() . '/assets/img/design-icon.png' ?>"><span id="design-nav">Design</span>
             <div class="arrow arrow-hide  arrow-designs"></div>
-          </div>
+          </div></a>
          </div>
 
 
