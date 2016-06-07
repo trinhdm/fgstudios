@@ -1,2 +1,0 @@
-themes/fgstudios/style.css.map
-themes/fgstudios/assets/.sass-cache/

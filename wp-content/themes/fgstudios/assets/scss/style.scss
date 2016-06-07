@@ -1,3 +1,5 @@
+// framework/portfolio-override.scss = overrides nav, logo and footer for portfolio page
+
 @import "base/includes";
 @import "base/base";
 
@@ -6,3 +8,4 @@
 @import "modules/loader";
 
 @import "framework/home";
+@import "framework/portfolio";

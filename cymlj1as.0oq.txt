@@ -1,0 +1,21 @@
+﻿finished the trio of boxes for the portfolio
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	new file:   wp-content/themes/fgstudios/assets/.sass-cache/11bcaf227245ecda71980bcd73026b3e8160b677/_portfolio.scssc
+#	modified:   wp-content/themes/fgstudios/assets/.sass-cache/11bcaf227245ecda71980bcd73026b3e8160b677/portfolio-override.scssc
+#	modified:   wp-content/themes/fgstudios/assets/.sass-cache/576f352cd990aa8a0a73a87bc3fd016196f283ad/style.scssc
+#	modified:   wp-content/themes/fgstudios/assets/css/portfolio.css
+#	modified:   wp-content/themes/fgstudios/assets/css/portfolio.css.map
+#	new file:   wp-content/themes/fgstudios/assets/img/portfolio--design.jpg
+#	new file:   wp-content/themes/fgstudios/assets/img/portfolio--film.jpg
+#	new file:   wp-content/themes/fgstudios/assets/img/portfolio--photo.jpg
+#	new file:   wp-content/themes/fgstudios/assets/scss/framework/_portfolio.scss
+#	modified:   wp-content/themes/fgstudios/assets/scss/framework/portfolio-override.scss
+#	modified:   wp-content/themes/fgstudios/assets/scss/style.scss
+#	modified:   wp-content/themes/fgstudios/page-templates/portfolio-page.php
+#	modified:   wp-content/themes/fgstudios/style.css
+#	modified:   wp-content/themes/fgstudios/style.css.map
+#
+

@@ -569,4 +569,70 @@ h1 {
     display: inline-block;
     margin: 0; }
 
+#portfolio {
+  margin-top: 100px; }
+  #portfolio .portfolio--trio {
+    height: 470px;
+    border: 20px solid #fff;
+    text-align: center; }
+    #portfolio .portfolio--trio span {
+      color: rgba(0, 0, 0, 0.75);
+      background: rgba(255, 207, 207, 0.4);
+      padding: 5px 10px;
+      text-transform: uppercase;
+      font: 1.5em "HelveticaNeue", Verdana, sans-serif;
+      letter-spacing: 2px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+    #portfolio .portfolio--trio:hover span {
+      color: #fff;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+  #portfolio #films--trio {
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%; }
+    #portfolio #films--trio:hover {
+      background: linear-gradient(rgba(132, 132, 132, 0.5), rgba(132, 132, 132, 0.5)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  #portfolio #photos--trio {
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--photo.jpg") no-repeat 95% 50%; }
+    #portfolio #photos--trio:hover {
+      background: linear-gradient(rgba(132, 132, 132, 0.5), rgba(132, 132, 132, 0.5)), url("assets/img/portfolio--photo.jpg") no-repeat 95% 50%;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  #portfolio #design--trio {
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--design.jpg") no-repeat 95% 50%; }
+    #portfolio #design--trio:hover {
+      background: linear-gradient(rgba(132, 132, 132, 0.5), rgba(132, 132, 132, 0.5)), url("assets/img/portfolio--design.jpg") no-repeat 95% 50%;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  #portfolio #port--nav {
+    padding-left: 45px; }
+    #portfolio #port--nav span {
+      padding: 7px 20px;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #848484;
+      letter-spacing: 2px;
+      vertical-align: bottom; }
+    #portfolio #port--nav img {
+      height: 45px;
+      width: 45px;
+      display: inline-block; }
+    #portfolio #port--nav .middle {
+      padding: 10px 0; }
+
 /*# sourceMappingURL=style.css.map */
