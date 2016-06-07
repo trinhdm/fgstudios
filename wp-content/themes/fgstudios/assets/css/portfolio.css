@@ -44,4 +44,9 @@
     #fgsnav ul li a span {
       color: #848484; }
 
+.site-info {
+  position: relative;
+  color: #848484;
+  opacity: 1; }
+
 /*# sourceMappingURL=portfolio.css.map */

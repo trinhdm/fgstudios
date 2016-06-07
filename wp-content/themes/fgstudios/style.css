@@ -619,6 +619,45 @@ h1 {
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
+  #portfolio #port--main {
+    padding: 0 50px; }
+    #portfolio #port--main #port--main-nav a {
+      font-size: 70%;
+      letter-spacing: 1px;
+      color: #000;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 26px 0 5px;
+      margin: 0 10px;
+      text-decoration: none; }
+      #portfolio #port--main #port--main-nav a:hover {
+        color: #848484;
+        text-decoration: none;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+    #portfolio #port--main #port--main-nav .cat--active {
+      font-family: "HNBold", Verdana, sans-serif;
+      border-bottom: 4px solid #000; }
+    #portfolio #port--main h2 {
+      font-size: 26px;
+      color: #848484;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 15px 0; }
+    #portfolio #port--main .spacing {
+      margin: 30px 0 10px 0; }
+    #portfolio #port--main .portfolio-display {
+      border: 1px solid rgba(132, 132, 132, 0.5);
+      padding: 0;
+      max-height: 200px; }
+      #portfolio #port--main .portfolio-display img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        opacity: .8; }
   #portfolio #port--nav {
     padding-left: 45px; }
     #portfolio #port--nav span {
@@ -634,5 +673,17 @@ h1 {
       display: inline-block; }
     #portfolio #port--nav .middle {
       padding: 10px 0; }
+    #portfolio #port--nav .arrow {
+      width: 0;
+      height: 0;
+      border-top: 22.5px solid transparent;
+      border-bottom: 22.5px solid transparent;
+      border-left: 10px solid #848484;
+      position: absolute;
+      right: 0; }
+    #portfolio #port--nav .arrow-hide {
+      display: none; }
+    #portfolio #port--nav .arrow-show {
+      display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

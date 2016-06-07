@@ -79,6 +79,58 @@
       @include transition(all .3s ease);
     }
   }
+  #port--main {
+    padding: 0 50px;
+
+    #port--main-nav {
+      a {
+        font-size: 70%;
+        letter-spacing: 1px;
+        color: $black;
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 26px 0 5px;
+        margin: 0 10px;
+        text-decoration: none;
+
+        &:hover {
+          color: $gray;
+          text-decoration: none;
+          @include transition(all .3s ease);
+        }
+      }
+
+      .cat--active {
+        font-family: $bodyFontBold;
+        border-bottom: 4px solid $black;
+      }
+    }
+
+    h2 {
+      font-size: 26px;
+      color: $gray;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 15px 0;
+    }
+
+    .spacing {
+      margin: 30px 0 10px 0;
+    }
+
+    .portfolio-display {
+      border: 1px solid rgba(132, 132, 132, 0.5);
+      padding: 0;
+      max-height: 200px;
+
+      img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        opacity: .8;
+      }
+    }
+  }
 
   #port--nav {
     padding-left: 45px;
@@ -100,6 +152,24 @@
 
     .middle {
       padding: 10px 0;
+    }
+
+    .arrow {
+      width: 0;
+      height: 0;
+      border-top: 22.5px solid transparent;
+      border-bottom: 22.5px solid transparent;
+      border-left: 10px solid $gray;
+      position: absolute;
+      right: 0;
+    }
+
+    .arrow-hide {
+      display: none;
+    }
+
+    .arrow-show {
+      display: inline-block;
     }
   }
 }
