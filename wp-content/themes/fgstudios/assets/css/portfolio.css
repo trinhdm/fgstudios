@@ -13,20 +13,18 @@
 ============================================= */
 /* MIXINS FOR RESPONSIVE DESIGN
 ============================================= */
-.animate-delay3 {
-  -moz-animation-delay: 0s;
-  /* Firefox */
-  -webkit-animation-delay: 0s;
-  /* Safari and Chrome */
-  -o-animation-delay: 0s;
-  /* Opera */
-  animation-delay: 0s; }
+.logo--header {
+  top: 7px; }
+
+#main-logo {
+  height: 60px; }
 
 #fgsnav {
   top: 0;
   right: 0;
   border-bottom: 2px solid rgba(132, 132, 132, 0.5);
-  width: 100vw; }
+  width: 100vw;
+  border-radius: 0; }
   #fgsnav ul a:active, #fgsnav ul li.navlink-active a {
     border-bottom: 4px solid #848484;
     padding-bottom: 31px;
@@ -47,6 +45,11 @@
 .site-info {
   position: relative;
   color: #848484;
-  opacity: 1; }
+  opacity: 1;
+  padding: 50px 50px 0 0; }
+  .site-info a, .site-info a:hover {
+    color: #848484; }
+  .site-info a:hover {
+    border-bottom: 2px solid #848484; }
 
 /*# sourceMappingURL=portfolio.css.map */

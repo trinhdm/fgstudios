@@ -9,6 +9,9 @@
 <script>
 (function($) {
   $('ul.navbar-nav').addClass('navbar-right');
+  $('#fgsnav').removeClass('animate-delay3');
+  $('.logo--header').removeClass('animate-delay3');
+  $('#main-logo').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/logo-black.png' ?>');
 
   $(function(){
     $('#port--nav').affix({
@@ -66,7 +69,7 @@
          </div></a>
        </div>
 
-
+       <div class="row" style="margin-top: 20px">
          <div class="col-md-2" id="port--nav" data-spy="affix">
            <a href="#films--main"><div class="row">
              <img src="<?php echo get_template_directory_uri() . '/assets/img/film-icon.png' ?>"><span id="film-nav">Films</span>
@@ -92,9 +95,9 @@
            <span id="films--main"></span>
            <div class="row">
              <div class="col-md-3">
-               <h2 class="films--header">Films</h2>
+               <h2 class="films--header nospacing">Films</h2>
              </div>
-             <div class="col-md-9" id="port--main-nav">
+             <div class="col-md-9 nospacing" id="port--main-nav">
                <a class="cat cat--active" data-filter="*">All</a>
                <a class="cat" data-filter=".highlights">Event Highlights</a>
                <a class="cat" data-filter=".commercials">Commercials</a>
@@ -260,6 +263,7 @@
              </div>
            </div>
 
+         </div>
        </div>
      </div>
   </div>

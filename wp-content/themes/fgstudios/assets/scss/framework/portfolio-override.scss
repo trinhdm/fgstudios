@@ -1,7 +1,11 @@
 @import "../base/includes";
 
-.animate-delay3 {
-  @include animation-delay(0s);
+.logo--header {
+  top: 7px;
+}
+
+#main-logo {
+  height: 60px;
 }
 
 #fgsnav {
@@ -9,6 +13,7 @@
   right: 0;
   border-bottom: 2px solid rgba(132, 132, 132, 0.5);
   width: 100vw;
+  border-radius: 0;
 
   ul {
     a:active, li.navlink-active a {
@@ -43,4 +48,13 @@
   position: relative;
   color: $gray;
   opacity: 1;
+  padding: 50px 50px 0 0;
+
+  a, a:hover {
+    color: $gray;
+  }
+
+  a:hover {
+    border-bottom: 2px solid $gray;
+  }
 }

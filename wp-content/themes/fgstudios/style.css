@@ -570,7 +570,8 @@ h1 {
     margin: 0; }
 
 #portfolio {
-  margin-top: 100px; }
+  margin-top: 100px;
+  padding: 0; }
   #portfolio .portfolio--trio {
     height: 470px;
     border: 20px solid #fff;
@@ -593,44 +594,60 @@ h1 {
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
   #portfolio #films--trio {
-    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%; }
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     #portfolio #films--trio:hover {
-      background: linear-gradient(rgba(132, 132, 132, 0.5), rgba(132, 132, 132, 0.5)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/portfolio--film.jpg") no-repeat 80% 50%;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   #portfolio #photos--trio {
-    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--photo.jpg") no-repeat 95% 50%; }
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--photo.jpg") no-repeat 50% 60%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     #portfolio #photos--trio:hover {
-      background: linear-gradient(rgba(132, 132, 132, 0.5), rgba(132, 132, 132, 0.5)), url("assets/img/portfolio--photo.jpg") no-repeat 95% 50%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/portfolio--photo.jpg") no-repeat 30% 60%;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   #portfolio #design--trio {
-    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--design.jpg") no-repeat 95% 50%; }
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--design.jpg") no-repeat 50% 50%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     #portfolio #design--trio:hover {
-      background: linear-gradient(rgba(132, 132, 132, 0.5), rgba(132, 132, 132, 0.5)), url("assets/img/portfolio--design.jpg") no-repeat 95% 50%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/portfolio--design.jpg") no-repeat 35% 50%;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   #portfolio #port--main {
-    padding: 0 50px;
+    padding: 0 35px 0 50px;
     float: right; }
     #portfolio #port--main #port--main-nav {
-      text-align: right; }
+      text-align: right;
+      padding-top: 20px; }
       #portfolio #port--main #port--main-nav a {
         font-size: 70%;
         letter-spacing: 1px;
         color: #000;
         display: inline-block;
         text-transform: uppercase;
-        padding: 20px 0 5px;
+        padding: 0 0 5px;
         margin: 0 10px;
         text-decoration: none; }
         #portfolio #port--main #port--main-nav a:hover {
@@ -653,12 +670,15 @@ h1 {
       display: inline-block;
       margin: 15px 0;
       padding: 1px; }
-    #portfolio #port--main #films--main, #portfolio #port--main #photos--main, #portfolio #port--main #designs--main {
+    #portfolio #port--main #photos--main, #portfolio #port--main #designs--main {
       margin: 3px; }
+    #portfolio #port--main .nospacing {
+      margin-top: 0;
+      padding-top: 0 !important; }
     #portfolio #port--main .spacing {
       margin: 10px 0 20px 0; }
     #portfolio #port--main .portfolio-display {
-      border: 1px solid rgba(132, 132, 132, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.5);
       padding: 0;
       max-height: 200px; }
       #portfolio #port--main .portfolio-display img {
@@ -667,7 +687,7 @@ h1 {
         object-fit: cover;
         opacity: .8; }
   #portfolio #port--nav {
-    padding: 0 0 0 45px; }
+    padding: 0 0 0 40px; }
     #portfolio #port--nav span {
       color: #848484;
       background: rgba(255, 207, 207, 0.4);
@@ -677,17 +697,20 @@ h1 {
       padding: 1px;
       display: inline-block;
       vertical-align: bottom; }
+      @media (min-width: 979px) and (max-width: 1199px) {
+        #portfolio #port--nav span {
+          font-size: 11px; } }
     #portfolio #port--nav img {
-      height: 45px;
-      width: 45px;
+      height: 38px;
+      width: 38px;
       display: inline-block; }
     #portfolio #port--nav .middle {
       padding: 10px 0; }
     #portfolio #port--nav .arrow {
       width: 0;
       height: 0;
-      border-top: 22.5px solid transparent;
-      border-bottom: 22.5px solid transparent;
+      border-top: 19px solid transparent;
+      border-bottom: 19px solid transparent;
       border-left: 10px solid #848484;
       position: relative;
       vertical-align: bottom;
@@ -710,7 +733,7 @@ h1 {
 @media (min-width: 1200px) {
   .affix-bottom {
     width: 263px; } }
-@media (min-width: 979px) {
+@media (max-width: 970px) {
   #port--nav.affix-top {
     position: static;
     width: 190px; }
@@ -718,6 +741,24 @@ h1 {
   #port--nav.affix {
     position: fixed;
     width: 190px;
+    top: 20px; } }
+@media (min-width: 1200px) {
+  #port--nav.affix-top {
+    position: static;
+    width: 190px; }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 190px;
+    top: 20px; } }
+@media (min-width: 979px) and (max-width: 1199px) {
+  #port--nav.affix-top {
+    position: static;
+    width: 160px; }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 160px;
     top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

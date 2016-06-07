@@ -1,5 +1,6 @@
 #portfolio {
   margin-top: 100px;
+  padding: 0;
 
   .portfolio--trio {
     height: 470px;
@@ -32,13 +33,14 @@
       rgba(255, 255, 255, 0.25)
     ),
     url('assets/img/portfolio--film.jpg') no-repeat 95% 50%;
+    @include transition(all .3s ease);
 
     &:hover {
       background: linear-gradient(
-        rgba(132, 132, 132, 0.5),
-        rgba(132, 132, 132, 0.5)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
       ),
-      url('assets/img/portfolio--film.jpg') no-repeat 95% 50%;
+      url('assets/img/portfolio--film.jpg') no-repeat 80% 50%;
 
       @include transition(all .3s ease);
     }
@@ -49,14 +51,15 @@
       rgba(255, 255, 255, 0.25),
       rgba(255, 255, 255, 0.25)
     ),
-    url('assets/img/portfolio--photo.jpg') no-repeat 95% 50%;
+    url('assets/img/portfolio--photo.jpg') no-repeat 50% 60%;
+    @include transition(all .3s ease);
 
     &:hover {
       background: linear-gradient(
-        rgba(132, 132, 132, 0.5),
-        rgba(132, 132, 132, 0.5)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
       ),
-      url('assets/img/portfolio--photo.jpg') no-repeat 95% 50%;
+      url('assets/img/portfolio--photo.jpg') no-repeat 30% 60%;
 
       @include transition(all .3s ease);
     }
@@ -67,14 +70,15 @@
       rgba(255, 255, 255, 0.25),
       rgba(255, 255, 255, 0.25)
     ),
-    url('assets/img/portfolio--design.jpg') no-repeat 95% 50%;
+    url('assets/img/portfolio--design.jpg') no-repeat 50% 50%;
+    @include transition(all .3s ease);
 
     &:hover {
       background: linear-gradient(
-        rgba(132, 132, 132, 0.5),
-        rgba(132, 132, 132, 0.5)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
       ),
-      url('assets/img/portfolio--design.jpg') no-repeat 95% 50%;
+      url('assets/img/portfolio--design.jpg') no-repeat 35% 50%;
 
       @include transition(all .3s ease);
     }
@@ -83,11 +87,12 @@
 
 
   #port--main {
-    padding: 0 50px;
+    padding: 0 35px 0 50px;
     float: right;         // to tempfix the fixed scroll sidebar
 
     #port--main-nav {
       text-align: right;
+      padding-top: 20px;
 
       a {
         font-size: 70%;
@@ -95,7 +100,7 @@
         color: $black;
         display: inline-block;
         text-transform: uppercase;
-        padding: 20px 0 5px;
+        padding: 0 0 5px;
         margin: 0 10px;
         text-decoration: none;
 
@@ -123,8 +128,13 @@
       padding: 1px;
     }
 
-    #films--main, #photos--main, #designs--main {
+    #photos--main, #designs--main {
       margin: 3px;
+    }
+
+    .nospacing {
+      margin-top: 0;
+      padding-top: 0 !important;
     }
 
     .spacing {
@@ -132,7 +142,7 @@
     }
 
     .portfolio-display {
-      border: 1px solid rgba(132, 132, 132, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.5);
       padding: 0;
       max-height: 200px;
 
@@ -146,7 +156,7 @@
   }
 
   #port--nav {
-    padding: 0 0 0 45px;
+    padding: 0 0 0 40px;
 
     span {
       color: $gray;
@@ -157,11 +167,15 @@
       padding: 1px;
       display: inline-block;
       vertical-align: bottom;
+
+      @media (min-width: 979px) and (max-width: 1199px) {
+        font-size: 11px;
+      }
     }
 
     img {
-      height: 45px;
-      width: 45px;
+      height: 38px;
+      width: 38px;
       display: inline-block;
     }
 
@@ -172,8 +186,8 @@
     .arrow {
       width: 0;
       height: 0;
-      border-top: 22.5px solid transparent;
-      border-bottom: 22.5px solid transparent;
+      border-top: 19px solid transparent;
+      border-bottom: 19px solid transparent;
       border-left: 10px solid $gray;
       position: relative;
       vertical-align: bottom;
@@ -214,7 +228,7 @@
   }
 }
 
-@media (min-width: 979px) {
+@media (max-width: 970px) {
   #port--nav.affix-top {
     position: static;
   	width: 190px;
@@ -223,6 +237,32 @@
   #port--nav.affix {
     position: fixed;
     width: 190px;
+    top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 190px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 190px;
+    top: 20px;
+  }
+}
+
+@media (min-width: 979px) and (max-width: 1199px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 160px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 160px;
     top: 20px;
   }
 }
