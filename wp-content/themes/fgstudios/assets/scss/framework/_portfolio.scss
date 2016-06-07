@@ -79,10 +79,16 @@
       @include transition(all .3s ease);
     }
   }
+
+
+
   #port--main {
     padding: 0 50px;
+    float: right;         // to tempfix the fixed scroll sidebar
 
     #port--main-nav {
+      text-align: right;
+
       a {
         font-size: 70%;
         letter-spacing: 1px;
@@ -133,7 +139,7 @@
   }
 
   #port--nav {
-    padding-left: 45px;
+    padding: 0 0 0 45px;
 
     span {
       padding: 7px 20px;
@@ -160,8 +166,9 @@
       border-top: 22.5px solid transparent;
       border-bottom: 22.5px solid transparent;
       border-left: 10px solid $gray;
-      position: absolute;
-      right: 0;
+      position: relative;
+      vertical-align: bottom;
+      float: right;
     }
 
     .arrow-hide {
@@ -171,5 +178,37 @@
     .arrow-show {
       display: inline-block;
     }
+  }
+}
+
+
+// FIXED STICKY SIDEBAR
+
+
+.affix-top, .affix{
+	position: static;
+}
+
+.affix-bottom {
+  position: absolute;
+  width: 213px;
+}
+
+@media (min-width: 1200px) {
+  .affix-bottom {
+    width: 263px;
+  }
+}
+
+@media (min-width: 979px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 190px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 190px;
+    top: 20px;
   }
 }

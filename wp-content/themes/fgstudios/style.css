@@ -620,27 +620,30 @@ h1 {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   #portfolio #port--main {
-    padding: 0 50px; }
-    #portfolio #port--main #port--main-nav a {
-      font-size: 70%;
-      letter-spacing: 1px;
-      color: #000;
-      display: inline-block;
-      text-transform: uppercase;
-      padding: 26px 0 5px;
-      margin: 0 10px;
-      text-decoration: none; }
-      #portfolio #port--main #port--main-nav a:hover {
-        color: #848484;
-        text-decoration: none;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
-    #portfolio #port--main #port--main-nav .cat--active {
-      font-family: "HNBold", Verdana, sans-serif;
-      border-bottom: 4px solid #000; }
+    padding: 0 50px;
+    float: right; }
+    #portfolio #port--main #port--main-nav {
+      text-align: right; }
+      #portfolio #port--main #port--main-nav a {
+        font-size: 70%;
+        letter-spacing: 1px;
+        color: #000;
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 26px 0 5px;
+        margin: 0 10px;
+        text-decoration: none; }
+        #portfolio #port--main #port--main-nav a:hover {
+          color: #848484;
+          text-decoration: none;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+      #portfolio #port--main #port--main-nav .cat--active {
+        font-family: "HNBold", Verdana, sans-serif;
+        border-bottom: 4px solid #000; }
     #portfolio #port--main h2 {
       font-size: 26px;
       color: #848484;
@@ -659,7 +662,7 @@ h1 {
         object-fit: cover;
         opacity: .8; }
   #portfolio #port--nav {
-    padding-left: 45px; }
+    padding: 0 0 0 45px; }
     #portfolio #port--nav span {
       padding: 7px 20px;
       display: inline-block;
@@ -679,11 +682,32 @@ h1 {
       border-top: 22.5px solid transparent;
       border-bottom: 22.5px solid transparent;
       border-left: 10px solid #848484;
-      position: absolute;
-      right: 0; }
+      position: relative;
+      vertical-align: bottom;
+      float: right; }
     #portfolio #port--nav .arrow-hide {
       display: none; }
     #portfolio #port--nav .arrow-show {
       display: inline-block; }
+
+.affix-top, .affix {
+  position: static; }
+
+.affix-bottom {
+  position: absolute;
+  width: 213px; }
+
+@media (min-width: 1200px) {
+  .affix-bottom {
+    width: 263px; } }
+@media (min-width: 979px) {
+  #port--nav.affix-top {
+    position: static;
+    width: 190px; }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 190px;
+    top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

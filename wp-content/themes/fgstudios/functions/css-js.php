@@ -23,11 +23,8 @@ function fgstudios_scripts() {
 function enqueue_js() {
   wp_enqueue_script('jquery');
 
-	wp_register_script('init', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
-	wp_enqueue_script('init');
-  //
-  wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array('jquery'));
-  wp_enqueue_script('modernizr');
+  wp_register_script('sticky', get_template_directory_uri() . '/assets/js/sticky-anything.js', array('jquery'));
+  wp_enqueue_script('sticky');
 
 	// wp_register_script('isotope', get_template_directory_uri() . '/assets/js/isotope.js', array('jquery'));
 	// wp_enqueue_script('isotope');
@@ -37,6 +34,9 @@ function enqueue_js() {
 
   wp_register_script('jquery.bootstrap.min', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', 'jquery');
   wp_enqueue_script('jquery.bootstrap.min');
+
+  wp_register_script('init', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
+	wp_enqueue_script('init');
 }
 
 add_action( 'init', 'enqueue_js' );
