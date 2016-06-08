@@ -1,0 +1,70 @@
+// FIXED STICKY SIDEBAR
+
+
+.affix-top, .affix{
+	position: static;
+}
+
+.affix-bottom {
+  position: absolute;
+  width: 213px;
+}
+
+@media (min-width: 1200px) {
+  .affix-bottom {
+    width: 263px;
+  }
+}
+
+@media (max-width: 970px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 190px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 190px;
+    top: 20px;
+  }
+}
+
+
+@media (min-width: 979px) and (max-width: 1199px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 160px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 160px;
+    top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 190px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 190px;
+    top: 20px;
+  }
+}
+
+@media (min-width: 1900px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 290px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 290px;
+    top: 20px;
+  }
+}

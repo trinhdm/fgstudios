@@ -23,8 +23,8 @@ function fgstudios_scripts() {
 function enqueue_js() {
   wp_enqueue_script('jquery');
 
-  wp_register_script('sticky', get_template_directory_uri() . '/assets/js/sticky-anything.js', array('jquery'));
-  wp_enqueue_script('sticky');
+  wp_register_script('imagesload', get_template_directory_uri() . '/assets/js/images-loaded.js', array('jquery'));
+  wp_enqueue_script('imagesload');
 
 	wp_register_script('isotope', get_template_directory_uri() . '/assets/js/isotope.js', array('jquery'));
 	wp_enqueue_script('isotope');

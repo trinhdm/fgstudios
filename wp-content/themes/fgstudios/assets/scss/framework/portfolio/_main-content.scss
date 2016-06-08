@@ -1,0 +1,78 @@
+#port--main {
+  padding: 0 35px 0 50px;
+  float: right;         // to tempfix the fixed scroll sidebar
+
+  #port--main-nav {
+    text-align: right;
+    padding-top: 20px;
+    z-index: 200;
+
+    a {
+      font-size: 70%;
+      letter-spacing: 1px;
+      color: $black;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 0 0 5px;
+      margin: 0 10px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $gray;
+        text-decoration: none;
+        @include transition(all .3s ease);
+      }
+    }
+
+    .cat--active-film, .cat--active-photo, .cat--active-design {
+      font-family: $bodyFontBold;
+      border-bottom: 4px solid $black;
+    }
+  }
+
+  h2 {
+    font-size: 26px;
+    color: $gray;
+    background: rgba(255, 207, 207, .4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin: 15px 0;
+    padding: 1px;
+  }
+
+  #photos--main, #designs--main {
+    margin: 3px;
+  }
+
+  .nospacing {
+    margin-top: 0;
+    padding-top: 0 !important;
+  }
+
+  .spacing {
+    margin: 10px 0 20px 0;
+  }
+
+  .portfolio-display {
+    // border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 0;
+    max-height: 200px;
+
+    img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      opacity: .8;
+    }
+
+    &:hover {
+      background: $black;
+
+      img {
+        opacity: .5;
+      }
+    }
+  }
+}

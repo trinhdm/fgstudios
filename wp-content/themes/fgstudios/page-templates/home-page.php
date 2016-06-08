@@ -41,9 +41,9 @@ body {
           <div class="animated fadeInLeft animate-delay2"><span class="line"></span><?php the_content(); ?></div>
 
 
-          <button type="button" class="btn btn-primary home--button" data-toggle="button" aria-pressed="false">
+          <a href="/portfolio"><button type="button" class="btn btn-primary home--button" data-toggle="button" aria-pressed="false">
             <p>Portfolio</p> <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
-          </button>
+          </button></a>
         </div>
 
       </div><!-- .entry-content -->

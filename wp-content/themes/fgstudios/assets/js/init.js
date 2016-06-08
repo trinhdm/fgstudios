@@ -63,6 +63,10 @@ $(function() {
     });
   return false;
   });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
 });
 
 
@@ -99,6 +103,10 @@ $(function() {
     });
   return false;
   });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
 });
 
 
@@ -132,6 +140,10 @@ $(function() {
         }
     });
   return false;
+  });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
   });
 });
 
