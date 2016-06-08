@@ -16,35 +16,108 @@
   });
 });
 
-//   $(function() {
-//   var $grid = $('#portfolio').isotope({
-//     itemSelector: '.pic-grid',
-//     percentPosition: true,
-//     filter: '*',
-//     transitionDuration: '0.8s',
-//     // only opacity for reveal/hide transition
-//     hiddenStyle: {
-//       opacity: 0
-//     },
-//     visibleStyle: {
-//       opacity: 1
-//     }
-//   });
-//
-//   $('.cat').click(function(){
-//     var selector = $(this).attr('data-filter');
-//     $grid.isotope({
-//         filter: selector,
-//         animationOptions: {
-//             duration: 750,
-//             easing: 'linear',
-//             queue: false,
-//         }
-//     });
-//   return false;
-//   });
-// });
 
+
+$(function() {
+  var $grid = $('#film-grid').isotope({
+    itemSelector: '.film-item',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    // layoutMode: 'fitColumns',
+    masonry: {
+      columnWidth: '.col-md-4'
+    },
+    // only opacity for reveal/hide transition
+    containerStyle: {
+		  position: 'relative',
+		  overflow: 'visible'
+	  }
+  });
+
+  $('.film-cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+  });
+});
+
+
+
+
+
+// portfolio: photo isotope
+$(function() {
+  var $grid = $('#photo-grid').isotope({
+    itemSelector: '.photo-item',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    // layoutMode: 'fitColumns',
+    masonry: {
+      columnWidth: '.col-md-4'
+    },
+    // only opacity for reveal/hide transition
+    containerStyle: {
+		  position: 'relative',
+		  overflow: 'visible'
+	  }
+  });
+
+  $('.photo-cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+  });
+});
+
+
+
+// portfolio: design isotope
+$(function() {
+  var $grid = $('#design-grid').isotope({
+    itemSelector: '.design-item',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    // layoutMode: 'fitColumns',
+    masonry: {
+      columnWidth: '.col-md-4'
+    },
+    // only opacity for reveal/hide transition
+    containerStyle: {
+		  position: 'relative',
+		  overflow: 'visible'
+	  }
+  });
+
+  $('.design-cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+  });
+});
 
 // $(function() {
 //

@@ -98,54 +98,56 @@
                <h2 class="films--header nospacing">Films</h2>
              </div>
              <div class="col-md-9 nospacing" id="port--main-nav">
-               <a class="cat cat--active" data-filter="*">All</a>
-               <a class="cat" data-filter=".highlights">Event Highlights</a>
-               <a class="cat" data-filter=".commercials">Commercials</a>
-               <a class="cat" data-filter=".documentaries">Documentaries</a>
-               <a class="cat" data-filter=".shows">Shows</a>
-               <a class="cat" data-filter=".weddings">Weddings</a>
+               <a class="film-cat cat--active" data-filter="*">All</a>
+               <a class="film-cat" data-filter=".film-highlights">Event Highlights</a>
+               <a class="film-cat" data-filter=".film-commercials">Commercials</a>
+               <a class="film-cat" data-filter=".film-documentaries">Documentaries</a>
+               <a class="film-cat" data-filter=".film-shows">Shows</a>
+               <a class="film-cat" data-filter=".film-weddings">Weddings</a>
              </div>
            </div>
 
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+           <div id="film-grid">
+             <div class="row">
+               <div class="col-md-4 portfolio-display film-item film-highlights">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display film-item film-shows film-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display film-item film-highlights film-documentaries">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
+               </div>
              </div>
 
-             <div class="col-md-4 portfolio-display pic-grid shows weddings">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+             <div class="row">
+               <div class="col-md-4 portfolio-display film-item film-commercials">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display film-item film-commercials film-documentaries film-shows">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display film-item film-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
+               </div>
              </div>
 
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-           </div>
+             <div class="row">
+               <div class="col-md-4 portfolio-display film-item film-highlights film-shows">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
+               </div>
 
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
+               <div class="col-md-4 portfolio-display film-item film-shows film-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
+               </div>
 
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-           </div>
-
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid shows weddings">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               <div class="col-md-4 portfolio-display film-item film-documentaries">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               </div>
              </div>
            </div>
 
@@ -155,54 +157,56 @@
                <h2 class="spacing photos--header">Photos</h2>
              </div>
              <div class="col-md-9" id="port--main-nav">
-               <a class="cat cat--active" data-filter="*">All</a>
-               <a class="cat" data-filter=".highlights">Event Highlights</a>
-               <a class="cat" data-filter=".commercials">Commercials</a>
-               <a class="cat" data-filter=".documentaries">Documentaries</a>
-               <a class="cat" data-filter=".shows">Shows</a>
-               <a class="cat" data-filter=".weddings">Weddings</a>
+               <a class="photo-cat cat--active" data-filter="*">All</a>
+               <a class="photo-cat" data-filter=".photo-highlights">Event Highlights</a>
+               <a class="photo-cat" data-filter=".photo-commercials">Commercials</a>
+               <a class="photo-cat" data-filter=".photo-documentaries">Documentaries</a>
+               <a class="photo-cat" data-filter=".photo-shows">Shows</a>
+               <a class="photo-cat" data-filter=".photo-weddings">Weddings</a>
              </div>
            </div>
 
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+           <div id="photo-grid">
+             <div class="row">
+               <div class="col-md-4 portfolio-display photo-item photo-highlights">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display photo-item photo-shows photo-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display photo-item photo-highlights photo-documentaries">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
+               </div>
              </div>
 
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+             <div class="row">
+               <div class="col-md-4 portfolio-display photo-item photo-commercials">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display photo-item photo-commercials photo-documentaries photo-shows">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display photo-item photo-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
+               </div>
              </div>
 
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-           </div>
+             <div class="row">
+               <div class="col-md-4 portfolio-display photo-item photo-highlights photo-shows">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
+               </div>
 
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
+               <div class="col-md-4 portfolio-display photo-item photo-shows photo-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
+               </div>
 
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-           </div>
-
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid shows weddings">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               <div class="col-md-4 portfolio-display photo-item photo-documentaries">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               </div>
              </div>
            </div>
 
@@ -212,54 +216,56 @@
                <h2 class="spacing designs--header">Designs</h2>
              </div>
              <div class="col-md-9" id="port--main-nav">
-               <a class="cat cat--active" data-filter="*">All</a>
-               <a class="cat" data-filter=".highlights">Event Highlights</a>
-               <a class="cat" data-filter=".commercials">Commercials</a>
-               <a class="cat" data-filter=".documentaries">Documentaries</a>
-               <a class="cat" data-filter=".shows">Shows</a>
-               <a class="cat" data-filter=".weddings">Weddings</a>
+               <a class="design-cat cat--active" data-filter="*">All</a>
+               <a class="design-cat" data-filter=".design-highlights">Event Highlights</a>
+               <a class="design-cat" data-filter=".design-commercials">Commercials</a>
+               <a class="design-cat" data-filter=".design-documentaries">Documentaries</a>
+               <a class="design-cat" data-filter=".design-shows">Shows</a>
+               <a class="design-cat" data-filter=".design-weddings">Weddings</a>
              </div>
            </div>
 
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+           <div id="design-grid">
+             <div class="row">
+               <div class="col-md-4 portfolio-display design-item design-highlights">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display design-item design-shows design-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display design-item design-highlights design-documentaries">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
+               </div>
              </div>
 
-             <div class="col-md-4 portfolio-display pic-grid shows weddings">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+             <div class="row">
+               <div class="col-md-4 portfolio-display design-item design-commercials">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display design-item design-commercials design-documentaries design-shows">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
+               </div>
+
+               <div class="col-md-4 portfolio-display design-item design-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
+               </div>
              </div>
 
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-           </div>
+             <div class="row">
+               <div class="col-md-4 portfolio-display design-item design-highlights design-shows">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
+               </div>
 
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
+               <div class="col-md-4 portfolio-display design-item design-shows design-weddings">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
+               </div>
 
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-           </div>
-
-           <div class="row">
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid shows weddings">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-             </div>
-
-             <div class="col-md-4 portfolio-display pic-grid highlights">
-               <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               <div class="col-md-4 portfolio-display design-item design-documentaries">
+                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
+               </div>
              </div>
            </div>
 

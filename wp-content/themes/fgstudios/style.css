@@ -640,7 +640,8 @@ h1 {
     float: right; }
     #portfolio #port--main #port--main-nav {
       text-align: right;
-      padding-top: 20px; }
+      padding-top: 20px;
+      z-index: 200; }
       #portfolio #port--main #port--main-nav a {
         font-size: 70%;
         letter-spacing: 1px;
@@ -678,7 +679,6 @@ h1 {
     #portfolio #port--main .spacing {
       margin: 10px 0 20px 0; }
     #portfolio #port--main .portfolio-display {
-      border: 1px solid rgba(0, 0, 0, 0.5);
       padding: 0;
       max-height: 200px; }
       #portfolio #port--main .portfolio-display img {
