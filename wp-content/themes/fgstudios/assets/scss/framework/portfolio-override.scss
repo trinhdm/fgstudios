@@ -6,6 +6,7 @@
 
 #main-logo {
   height: 60px;
+  z-index: 6;
 }
 
 #fgsnav {
@@ -14,6 +15,7 @@
   border-bottom: 2px solid rgba(132, 132, 132, 0.5);
   width: 100vw;
   border-radius: 0;
+  z-index: 5;
 
   ul {
     a:active, li.navlink-active a {

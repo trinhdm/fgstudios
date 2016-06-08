@@ -158,53 +158,54 @@
              </div>
              <div class="col-md-9 port--main-photo" id="port--main-nav">
                <a class="photo-cat cat--active-photo" data-filter="*">All</a>
-               <a class="photo-cat" data-filter=".photo-highlights">Event Highlights</a>
-               <a class="photo-cat" data-filter=".photo-commercials">Commercials</a>
-               <a class="photo-cat" data-filter=".photo-documentaries">Documentaries</a>
-               <a class="photo-cat" data-filter=".photo-shows">Shows</a>
+               <a class="photo-cat" data-filter=".photo-people">People</a>
+               <a class="photo-cat" data-filter=".photo-landscape">Landscape</a>
+               <a class="photo-cat" data-filter=".photo-commercials">Commercial</a>
                <a class="photo-cat" data-filter=".photo-weddings">Weddings</a>
+               <a class="photo-cat" data-filter=".photo-events">Events</a>
+               <a class="photo-cat" data-filter=".photo-booth">Photo Booth</a>
              </div>
            </div>
 
            <div id="photo-grid">
              <div class="row">
-               <div class="col-md-4 portfolio-display photo-item photo-highlights">
+               <div class="col-md-4 portfolio-display photo-item photo-people">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display photo-item photo-shows photo-weddings">
+               <div class="col-md-4 portfolio-display photo-item photo-weddings photo-events">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display photo-item photo-highlights photo-documentaries">
+               <div class="col-md-4 portfolio-display photo-item photo-booth photo-commercials">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
                </div>
              </div>
 
              <div class="row">
-               <div class="col-md-4 portfolio-display photo-item photo-commercials">
+               <div class="col-md-4 portfolio-display photo-item photo-landscape">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display photo-item photo-commercials photo-documentaries photo-shows">
+               <div class="col-md-4 portfolio-display photo-item photo-landscape photo-booth photo-weddings">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display photo-item photo-weddings">
+               <div class="col-md-4 portfolio-display photo-item photo-events">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
                </div>
              </div>
 
              <div class="row">
-               <div class="col-md-4 portfolio-display photo-item photo-highlights photo-shows">
+               <div class="col-md-4 portfolio-display photo-item photo-people photo-weddings">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display photo-item photo-shows photo-weddings">
+               <div class="col-md-4 portfolio-display photo-item photo-weddings photo-events">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display photo-item photo-documentaries">
+               <div class="col-md-4 portfolio-display photo-item photo-commercials">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
                </div>
              </div>
@@ -217,53 +218,54 @@
              </div>
              <div class="col-md-9 port--main-design" id="port--main-nav">
                <a class="design-cat cat--active-design" data-filter="*">All</a>
-               <a class="design-cat" data-filter=".design-highlights">Event Highlights</a>
-               <a class="design-cat" data-filter=".design-commercials">Commercials</a>
-               <a class="design-cat" data-filter=".design-documentaries">Documentaries</a>
-               <a class="design-cat" data-filter=".design-shows">Shows</a>
-               <a class="design-cat" data-filter=".design-weddings">Weddings</a>
+               <a class="design-cat" data-filter=".design-logos">Logos</a>
+               <a class="design-cat" data-filter=".design-graphics">Graphics</a>
+               <a class="design-cat" data-filter=".design-cards">Cards</a>
+               <a class="design-cat" data-filter=".design-shirts">Shirts</a>
+               <a class="design-cat" data-filter=".design-banners">Banners</a>
+               <a class="design-cat" data-filter=".design-other">Other Prints</a>
              </div>
            </div>
 
            <div id="design-grid">
              <div class="row">
-               <div class="col-md-4 portfolio-display design-item design-highlights">
+               <div class="col-md-4 portfolio-display design-item design-logos design-other">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display design-item design-shows design-weddings">
+               <div class="col-md-4 portfolio-display design-item design-shirts design-banners">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display design-item design-highlights design-documentaries">
+               <div class="col-md-4 portfolio-display design-item design-logos design-cards">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
                </div>
              </div>
 
              <div class="row">
-               <div class="col-md-4 portfolio-display design-item design-commercials">
+               <div class="col-md-4 portfolio-display design-item design-graphics">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display design-item design-commercials design-documentaries design-shows">
+               <div class="col-md-4 portfolio-display design-item design-other design-graphics design-cards design-shirts">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display design-item design-weddings">
+               <div class="col-md-4 portfolio-display design-item design-banners">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
                </div>
              </div>
 
              <div class="row">
-               <div class="col-md-4 portfolio-display design-item design-highlights design-shows">
+               <div class="col-md-4 portfolio-display design-item design-other design-logos design-shirts">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display design-item design-shows design-weddings">
+               <div class="col-md-4 portfolio-display design-item design-shirts design-banners">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
                </div>
 
-               <div class="col-md-4 portfolio-display design-item design-documentaries">
+               <div class="col-md-4 portfolio-display design-item design-cards">
                  <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
                </div>
              </div>

@@ -17,14 +17,16 @@
   top: 7px; }
 
 #main-logo {
-  height: 60px; }
+  height: 60px;
+  z-index: 6; }
 
 #fgsnav {
   top: 0;
   right: 0;
   border-bottom: 2px solid rgba(132, 132, 132, 0.5);
   width: 100vw;
-  border-radius: 0; }
+  border-radius: 0;
+  z-index: 5; }
   #fgsnav ul a:active, #fgsnav ul li.navlink-active a {
     border-bottom: 4px solid #848484;
     padding-bottom: 31px;

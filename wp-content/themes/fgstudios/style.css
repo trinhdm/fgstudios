@@ -593,7 +593,7 @@ h1 {
       top: 50%;
       transform: translateY(-50%); }
     #portfolio .portfolio--trio:hover span {
-      color: #fff;
+      color: rgba(255, 255, 255, 0.6);
       -webkit-transition: all 0.2s ease;
       -moz-transition: all 0.2s ease;
       -ms-transition: all 0.2s ease;
