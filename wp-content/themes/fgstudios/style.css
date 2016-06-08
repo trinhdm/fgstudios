@@ -572,6 +572,12 @@ h1 {
 #portfolio {
   margin-top: 100px;
   padding: 0; }
+  @media (min-width: 1900px) {
+    #portfolio {
+      width: 1800px; } }
+  @media (min-width: 1600px) and (max-width: 1899px) {
+    #portfolio {
+      width: 1500px; } }
   #portfolio .portfolio--trio {
     height: 470px;
     border: 20px solid #fff;
@@ -608,14 +614,14 @@ h1 {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   #portfolio #photos--trio {
-    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--photo.jpg") no-repeat 50% 60%;
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--photo.jpg") no-repeat 50% 70%;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     #portfolio #photos--trio:hover {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/portfolio--photo.jpg") no-repeat 30% 60%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/portfolio--photo.jpg") no-repeat 30% 70%;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
@@ -705,10 +711,24 @@ h1 {
       @media (min-width: 979px) and (max-width: 1199px) {
         #portfolio #port--nav span {
           font-size: 11px; } }
+      @media (min-width: 1600px) and (max-width: 1899px) {
+        #portfolio #port--nav span {
+          font-size: 15px; } }
+      @media (min-width: 1900px) {
+        #portfolio #port--nav span {
+          font-size: 20px; } }
     #portfolio #port--nav img {
       height: 38px;
       width: 38px;
       display: inline-block; }
+      @media (min-width: 1600px) and (max-width: 1899px) {
+        #portfolio #port--nav img {
+          height: 42px;
+          width: 42px; } }
+      @media (min-width: 1900px) {
+        #portfolio #port--nav img {
+          height: 50px;
+          width: 50px; } }
     #portfolio #port--nav .middle {
       padding: 10px 0; }
     #portfolio #port--nav .arrow {
@@ -720,6 +740,16 @@ h1 {
       position: relative;
       vertical-align: bottom;
       float: right; }
+      @media (min-width: 1600px) and (max-width: 1899px) {
+        #portfolio #port--nav .arrow {
+          border-top: 21px solid transparent;
+          border-bottom: 21px solid transparent;
+          border-left: 11px solid #848484; } }
+      @media (min-width: 1900px) {
+        #portfolio #port--nav .arrow {
+          border-top: 25px solid transparent;
+          border-bottom: 25px solid transparent;
+          border-left: 13px solid #848484; } }
     #portfolio #port--nav .arrow-hide {
       display: none; }
     #portfolio #port--nav .arrow-show {
@@ -747,6 +777,15 @@ h1 {
     position: fixed;
     width: 190px;
     top: 20px; } }
+@media (min-width: 979px) and (max-width: 1199px) {
+  #port--nav.affix-top {
+    position: static;
+    width: 160px; }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 160px;
+    top: 20px; } }
 @media (min-width: 1200px) {
   #port--nav.affix-top {
     position: static;
@@ -756,14 +795,14 @@ h1 {
     position: fixed;
     width: 190px;
     top: 20px; } }
-@media (min-width: 979px) and (max-width: 1199px) {
+@media (min-width: 1900px) {
   #port--nav.affix-top {
     position: static;
-    width: 160px; }
+    width: 290px; }
 
   #port--nav.affix {
     position: fixed;
-    width: 160px;
+    width: 290px;
     top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

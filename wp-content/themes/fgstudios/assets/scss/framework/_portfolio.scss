@@ -2,6 +2,14 @@
   margin-top: 100px;
   padding: 0;
 
+  @media (min-width: 1900px) {
+    width: 1800px;
+  }
+
+  @media (min-width: 1600px) and (max-width: 1899px) {
+    width: 1500px;
+  }
+
   .portfolio--trio {
     height: 470px;
     border: 20px solid $white;
@@ -51,7 +59,7 @@
       rgba(255, 255, 255, 0.25),
       rgba(255, 255, 255, 0.25)
     ),
-    url('assets/img/portfolio--photo.jpg') no-repeat 50% 60%;
+    url('assets/img/portfolio--photo.jpg') no-repeat 50% 70%;
     @include transition(all .3s ease);
 
     &:hover {
@@ -59,7 +67,7 @@
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),
-      url('assets/img/portfolio--photo.jpg') no-repeat 30% 60%;
+      url('assets/img/portfolio--photo.jpg') no-repeat 30% 70%;
 
       @include transition(all .3s ease);
     }
@@ -181,12 +189,30 @@
       @media (min-width: 979px) and (max-width: 1199px) {
         font-size: 11px;
       }
+
+      @media (min-width: 1600px) and (max-width: 1899px) {
+        font-size: 15px;
+      }
+
+      @media (min-width: 1900px) {
+        font-size: 20px;
+      }
     }
 
     img {
       height: 38px;
       width: 38px;
       display: inline-block;
+
+      @media (min-width: 1600px) and (max-width: 1899px) {
+        height: 42px;
+        width: 42px;
+      }
+
+      @media (min-width: 1900px) {
+        height: 50px;
+        width: 50px;
+      }
     }
 
     .middle {
@@ -202,6 +228,18 @@
       position: relative;
       vertical-align: bottom;
       float: right;
+
+      @media (min-width: 1600px) and (max-width: 1899px) {
+        border-top: 21px solid transparent;
+        border-bottom: 21px solid transparent;
+        border-left: 11px solid $gray;
+      }
+
+      @media (min-width: 1900px) {
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 13px solid $gray;
+      }
     }
 
     .arrow-hide {
@@ -251,6 +289,20 @@
   }
 }
 
+
+@media (min-width: 979px) and (max-width: 1199px) {
+  #port--nav.affix-top {
+    position: static;
+  	width: 160px;
+  }
+
+  #port--nav.affix {
+    position: fixed;
+    width: 160px;
+    top: 20px;
+  }
+}
+
 @media (min-width: 1200px) {
   #port--nav.affix-top {
     position: static;
@@ -264,15 +316,15 @@
   }
 }
 
-@media (min-width: 979px) and (max-width: 1199px) {
+@media (min-width: 1900px) {
   #port--nav.affix-top {
     position: static;
-  	width: 160px;
+  	width: 290px;
   }
 
   #port--nav.affix {
     position: fixed;
-    width: 160px;
+    width: 290px;
     top: 20px;
   }
 }

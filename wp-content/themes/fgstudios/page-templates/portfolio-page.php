@@ -58,13 +58,13 @@
   <main id="main" class="site-main" role="main">
      <div class="container" id="portfolio">
        <div class="row">
-         <a href="#films--main"><div class="col-md-4 portfolio--trio" id="films--trio">
+         <a href="#films--main"><div class="col-xl-4 col-md-4 portfolio--trio" id="films--trio">
            <span>Films</span>
          </div></a>
-         <a href="#photos--main"><div class="col-md-4 portfolio--trio" id="photos--trio">
+         <a href="#photos--main"><div class="col-xl-4 col-md-4 portfolio--trio" id="photos--trio">
            <span>Photos</span>
          </div></a>
-         <a href="#designs--main"><div class="col-md-4 portfolio--trio" id="design--trio">
+         <a href="#designs--main"><div class="col-xl-4 col-md-4 portfolio--trio" id="design--trio">
            <span>Designs</span>
          </div></a>
        </div>
