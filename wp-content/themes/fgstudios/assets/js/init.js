@@ -16,8 +16,24 @@
   });
 });
 
+$(function() {
+  $('#port--main-nav.port--main-film a').on('click', function(){
+    $('a.cat--active-film').removeClass('cat--active-film');
+    $(this).addClass('cat--active-film');
+  });
 
+  $('#port--main-nav.port--main-photo a').on('click', function(){
+    $('a.cat--active-photo').removeClass('cat--active-photo');
+    $(this).addClass('cat--active-photo');
+  });
 
+  $('#port--main-nav.port--main-design a').on('click', function(){
+    $('a.cat--active-design').removeClass('cat--active-design');
+    $(this).addClass('cat--active-design');
+  });
+});
+
+// portfolio: film isotope
 $(function() {
   var $grid = $('#film-grid').isotope({
     itemSelector: '.film-item',

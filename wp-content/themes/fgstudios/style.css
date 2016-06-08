@@ -650,7 +650,8 @@ h1 {
         text-transform: uppercase;
         padding: 0 0 5px;
         margin: 0 10px;
-        text-decoration: none; }
+        text-decoration: none;
+        cursor: pointer; }
         #portfolio #port--main #port--main-nav a:hover {
           color: #848484;
           text-decoration: none;
@@ -659,7 +660,7 @@ h1 {
           -ms-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease; }
-      #portfolio #port--main #port--main-nav .cat--active {
+      #portfolio #port--main #port--main-nav .cat--active-film, #portfolio #port--main #port--main-nav .cat--active-photo, #portfolio #port--main #port--main-nav .cat--active-design {
         font-family: "HNBold", Verdana, sans-serif;
         border-bottom: 4px solid #000; }
     #portfolio #port--main h2 {
@@ -686,6 +687,10 @@ h1 {
         max-height: 200px;
         object-fit: cover;
         opacity: .8; }
+      #portfolio #port--main .portfolio-display:hover {
+        background: #000; }
+        #portfolio #port--main .portfolio-display:hover img {
+          opacity: .5; }
   #portfolio #port--nav {
     padding: 0 0 0 40px; }
     #portfolio #port--nav span {

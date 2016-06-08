@@ -97,8 +97,8 @@
              <div class="col-md-3">
                <h2 class="films--header nospacing">Films</h2>
              </div>
-             <div class="col-md-9 nospacing" id="port--main-nav">
-               <a class="film-cat cat--active" data-filter="*">All</a>
+             <div class="col-md-9 nospacing port--main-film" id="port--main-nav">
+               <a class="film-cat cat--active-film" data-filter="*">All</a>
                <a class="film-cat" data-filter=".film-highlights">Event Highlights</a>
                <a class="film-cat" data-filter=".film-commercials">Commercials</a>
                <a class="film-cat" data-filter=".film-documentaries">Documentaries</a>
@@ -156,8 +156,8 @@
              <div class="col-md-3">
                <h2 class="spacing photos--header">Photos</h2>
              </div>
-             <div class="col-md-9" id="port--main-nav">
-               <a class="photo-cat cat--active" data-filter="*">All</a>
+             <div class="col-md-9 port--main-photo" id="port--main-nav">
+               <a class="photo-cat cat--active-photo" data-filter="*">All</a>
                <a class="photo-cat" data-filter=".photo-highlights">Event Highlights</a>
                <a class="photo-cat" data-filter=".photo-commercials">Commercials</a>
                <a class="photo-cat" data-filter=".photo-documentaries">Documentaries</a>
@@ -215,8 +215,8 @@
              <div class="col-md-3">
                <h2 class="spacing designs--header">Designs</h2>
              </div>
-             <div class="col-md-9" id="port--main-nav">
-               <a class="design-cat cat--active" data-filter="*">All</a>
+             <div class="col-md-9 port--main-design" id="port--main-nav">
+               <a class="design-cat cat--active-design" data-filter="*">All</a>
                <a class="design-cat" data-filter=".design-highlights">Event Highlights</a>
                <a class="design-cat" data-filter=".design-commercials">Commercials</a>
                <a class="design-cat" data-filter=".design-documentaries">Documentaries</a>

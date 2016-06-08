@@ -104,6 +104,7 @@
         padding: 0 0 5px;
         margin: 0 10px;
         text-decoration: none;
+        cursor: pointer;
 
         &:hover {
           color: $gray;
@@ -112,7 +113,7 @@
         }
       }
 
-      .cat--active {
+      .cat--active-film, .cat--active-photo, .cat--active-design {
         font-family: $bodyFontBold;
         border-bottom: 4px solid $black;
       }
@@ -152,6 +153,14 @@
         max-height: 200px;
         object-fit: cover;
         opacity: .8;
+      }
+
+      &:hover {
+        background: $black;
+
+        img {
+          opacity: .5;
+        }
       }
     }
   }
