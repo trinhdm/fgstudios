@@ -125,14 +125,14 @@ h1 {
       #fgsnav ul li a span::before {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 10px;
         content: attr(data-hover);
         height: 100%;
         width: 100%;
         font-family: "HNBold", Verdana, sans-serif;
         visibility: hidden; }
     #fgsnav ul li a:hover span {
-      transform: translateY(-20px);
+      transform: translateY(-10px);
       visibility: hidden; }
       #fgsnav ul li a:hover span::before {
         visibility: visible; }
@@ -584,10 +584,10 @@ h1 {
     text-align: center; }
     #portfolio .portfolio--trio span {
       color: rgba(0, 0, 0, 0.75);
-      background: rgba(255, 207, 207, 0.4);
-      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px 15px;
       text-transform: uppercase;
-      font: 1.5em "HelveticaNeue", Verdana, sans-serif;
+      font: 1.7em "HelveticaNeue", Verdana, sans-serif;
       letter-spacing: 2px;
       position: relative;
       top: 50%;
@@ -666,13 +666,77 @@ h1 {
           -ms-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease; }
-      #portfolio #port--main #port--main-nav .cat--active-film, #portfolio #port--main #port--main-nav .cat--active-photo, #portfolio #port--main #port--main-nav .cat--active-design {
-        font-family: "HNBold", Verdana, sans-serif;
-        border-bottom: 4px solid #000; }
+      #portfolio #port--main #port--main-nav .menu__list {
+        float: right;
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+      #portfolio #port--main #port--main-nav .film-item__port--main-nav,
+      #portfolio #port--main #port--main-nav .photo-item__port--main-nav {
+        display: block; }
+      #portfolio #port--main #port--main-nav .film-cat, #portfolio #port--main #port--main-nav .photo-cat, #portfolio #port--main #port--main-nav .design-cat {
+        font-family: "HelveticaNeue", Verdana, sans-serif;
+        display: block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: transparent; }
+        #portfolio #port--main #port--main-nav .film-cat:hover, #portfolio #port--main #port--main-nav .film-cat:focus, #portfolio #port--main #port--main-nav .photo-cat:hover, #portfolio #port--main #port--main-nav .photo-cat:focus, #portfolio #port--main #port--main-nav .design-cat:hover, #portfolio #port--main #port--main-nav .design-cat:focus {
+          outline: none; }
+      #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat,
+      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat,
+      #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat {
+        position: relative;
+        display: block;
+        color: #000;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s; }
+      #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat:hover, #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat:focus,
+      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat:hover, #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat:focus,
+      #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat:hover, #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat:focus {
+        color: #848484; }
+      #portfolio #port--main #port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat,
+      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat,
+      #portfolio #port--main #port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat {
+        color: #000;
+        font-family: "HNBold", Verdana, sans-serif; }
+      #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat::before,
+      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat::before,
+      #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat::before {
+        content: '';
+        margin-bottom: -5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #000;
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+        -webkit-transition: -webkit-transform 0.1s;
+        transition: transform 0.1s; }
+      #portfolio #port--main #port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat::before,
+      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat::before,
+      #portfolio #port--main #port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat::before {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s; }
     #portfolio #port--main h2 {
       font-size: 26px;
       color: #848484;
-      background: rgba(255, 207, 207, 0.4);
+      background: transparent;
       text-transform: uppercase;
       letter-spacing: 2px;
       display: inline-block;
@@ -701,7 +765,7 @@ h1 {
     padding: 0 0 0 40px; }
     #portfolio #port--nav span {
       color: #848484;
-      background: rgba(255, 207, 207, 0.4);
+      background: transparent;
       text-transform: uppercase;
       letter-spacing: 2px;
       margin: 7px 20px;

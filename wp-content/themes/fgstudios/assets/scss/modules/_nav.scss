@@ -85,7 +85,7 @@
         &::before {
           display: block;
           position: absolute;
-          top: 20px;
+          top: 10px;
           content: attr(data-hover);
           height: 100%;
           width: 100%;
@@ -96,7 +96,7 @@
 
       &:hover {
         span {
-          transform: translateY(-20px);
+          transform: translateY(-10px);
           visibility: hidden;
 
           &::before {

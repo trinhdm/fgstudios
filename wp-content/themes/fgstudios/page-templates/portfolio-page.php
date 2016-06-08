@@ -98,12 +98,16 @@
                <h2 class="films--header nospacing">Films</h2>
              </div>
              <div class="col-md-9 nospacing port--main-film" id="port--main-nav">
-               <a class="film-cat cat--active-film" data-filter="*">All</a>
-               <a class="film-cat" data-filter=".film-highlights">Event Highlights</a>
-               <a class="film-cat" data-filter=".film-commercials">Commercials</a>
-               <a class="film-cat" data-filter=".film-documentaries">Documentaries</a>
-               <a class="film-cat" data-filter=".film-shows">Shows</a>
-               <a class="film-cat" data-filter=".film-weddings">Weddings</a>
+               <nav class="menu film__port--main-nav">
+                 <ul class="menu__list">
+                   <li class="film-item__port--main-nav film-item__port--main-nav--current"><a class="menu__link film-cat cat--active-film" data-filter="*">All</a></li>
+                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-highlights">Event Highlights</a></li>
+                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-commercials">Commercials</a></li>
+                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-documentaries">Documentaries</a></li>
+                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-shows">Shows</a></li>
+                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-weddings">Weddings</a></li>
+                 </ul>
+               </nav>
              </div>
            </div>
 
@@ -157,13 +161,16 @@
                <h2 class="spacing photos--header">Photos</h2>
              </div>
              <div class="col-md-9 port--main-photo" id="port--main-nav">
-               <a class="photo-cat cat--active-photo" data-filter="*">All</a>
-               <a class="photo-cat" data-filter=".photo-people">People</a>
-               <a class="photo-cat" data-filter=".photo-landscape">Landscape</a>
-               <a class="photo-cat" data-filter=".photo-commercials">Commercial</a>
-               <a class="photo-cat" data-filter=".photo-weddings">Weddings</a>
-               <a class="photo-cat" data-filter=".photo-events">Events</a>
-               <a class="photo-cat" data-filter=".photo-booth">Photo Booth</a>
+               <nav class="menu photo__port--main-nav">
+                 <ul class="menu__list">
+                   <li class="photo-item__port--main-nav photo-item__port--main-nav--current"><a class="menu__link photo-cat cat--active-photo" data-filter="*">All</a></li>
+                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-people">People</a></li>
+                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-landscape">Landscape</a></li>
+                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-commercials">Commercial</a></li>
+                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-events">Events</a></li>
+                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-booth">Photo Booth</a></li>
+                 </ul>
+               </nav>
              </div>
            </div>
 
@@ -217,13 +224,17 @@
                <h2 class="spacing designs--header">Designs</h2>
              </div>
              <div class="col-md-9 port--main-design" id="port--main-nav">
-               <a class="design-cat cat--active-design" data-filter="*">All</a>
-               <a class="design-cat" data-filter=".design-logos">Logos</a>
-               <a class="design-cat" data-filter=".design-graphics">Graphics</a>
-               <a class="design-cat" data-filter=".design-cards">Cards</a>
-               <a class="design-cat" data-filter=".design-shirts">Shirts</a>
-               <a class="design-cat" data-filter=".design-banners">Banners</a>
-               <a class="design-cat" data-filter=".design-other">Other Prints</a>
+               <nav class="menu design__port--main-nav">
+                 <ul class="menu__list">
+                   <li class="design-item__port--main-nav design-item__port--main-nav--current"><a class="menu__link design-cat cat--active-design" data-filter="*">All</a></li>
+                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-logos">Logos</a></li>
+                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-graphics">Graphics</a></li>
+                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-cards">Cards</a></li>
+                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-shirts">Shirts</a></li>
+                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-banners">Banners</a></li>
+                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-other">Other Prints</a></li>
+                 </ul>
+               </nav>
              </div>
            </div>
 
@@ -281,3 +292,117 @@
 get_sidebar();
 get_footer();
 ?>
+<script>
+
+// FOR FILM port--main-nav
+(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'film-item__port--main-nav--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.film-item__port--main-nav--current'), 'film-item__port--main-nav--current');
+						// set current
+						classie.add(item, 'film-item__port--main-nav--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+
+
+
+    // FOR PHOTO port--main-nav
+    (function() {
+    			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+    				var menuItems = menu.querySelectorAll('.menu__link'),
+    					setCurrent = function(ev) {
+    						ev.preventDefault();
+
+    						var item = ev.target.parentNode; // li
+
+    						// return if already current
+    						if (classie.has(item, 'photo-item__port--main-nav--current')) {
+    							return false;
+    						}
+    						// remove current
+    						classie.remove(menu.querySelector('.photo-item__port--main-nav--current'), 'photo-item__port--main-nav--current');
+    						// set current
+    						classie.add(item, 'photo-item__port--main-nav--current');
+    					};
+
+    				[].slice.call(menuItems).forEach(function(el) {
+    					el.addEventListener('click', setCurrent);
+    				});
+    			});
+
+    			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+    				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+    				new Clipboard(link);
+    				link.addEventListener('click', function() {
+    					classie.add(link, 'link-copy--animate');
+    					setTimeout(function() {
+    						classie.remove(link, 'link-copy--animate');
+    					}, 300);
+    				});
+    			});
+    		})(window);
+
+
+
+        // FOR DESIGN port--main-nav
+        (function() {
+        			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+        				var menuItems = menu.querySelectorAll('.menu__link'),
+        					setCurrent = function(ev) {
+        						ev.preventDefault();
+
+        						var item = ev.target.parentNode; // li
+
+        						// return if already current
+        						if (classie.has(item, 'design-item__port--main-nav--current')) {
+        							return false;
+        						}
+        						// remove current
+        						classie.remove(menu.querySelector('.design-item__port--main-nav--current'), 'design-item__port--main-nav--current');
+        						// set current
+        						classie.add(item, 'design-item__port--main-nav--current');
+        					};
+
+        				[].slice.call(menuItems).forEach(function(el) {
+        					el.addEventListener('click', setCurrent);
+        				});
+        			});
+
+        			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+        				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+        				new Clipboard(link);
+        				link.addEventListener('click', function() {
+        					classie.add(link, 'link-copy--animate');
+        					setTimeout(function() {
+        						classie.remove(link, 'link-copy--animate');
+        					}, 300);
+        				});
+        			});
+        		})(window);
+    </script>

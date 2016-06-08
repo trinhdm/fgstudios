@@ -35,6 +35,9 @@ function enqueue_js() {
   wp_register_script('jquery.bootstrap.min', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', 'jquery');
   wp_enqueue_script('jquery.bootstrap.min');
 
+  wp_register_script('portfolio-menu', get_template_directory_uri() . '/assets/js/portfolio-line-menu-style.js', array('jquery'));
+	wp_enqueue_script('portfolio-menu');
+
   wp_register_script('init', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
 	wp_enqueue_script('init');
 }
