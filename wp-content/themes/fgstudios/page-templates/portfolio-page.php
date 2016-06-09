@@ -26,9 +26,9 @@
   });
 
   $(function() {
-    var photosHeader = $('h2.photos--header').offset().top - 190,
-    designsHeader = $('h2.designs--header').offset().top - 190,
-    filmsHeader = $('h2.films--header').offset().top - 190,
+    var photosHeader = $('h2.photos--header').offset().top,     // original is -190
+    designsHeader = $('h2.designs--header').offset().top,
+    filmsHeader = $('h2.films--header').offset().top,
     $window = $(window);
 
     $window.scroll(function() {
@@ -53,6 +53,9 @@
   });
 })( jQuery );
 </script>
+
+
+
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
@@ -100,12 +103,20 @@
              <div class="col-md-9 nospacing port--main-film" id="port--main-nav">
                <nav class="menu film__port--main-nav">
                  <ul class="menu__list">
-                   <li class="film-item__port--main-nav film-item__port--main-nav--current"><a class="menu__link film-cat cat--active-film" data-filter="*">All</a></li>
-                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-highlights">Event Highlights</a></li>
-                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-commercials">Commercials</a></li>
-                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-documentaries">Documentaries</a></li>
-                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-shows">Shows</a></li>
-                   <li class="film-item__port--main-nav"><a class="menu__link film-cat" data-filter=".film-weddings">Weddings</a></li>
+                   <?php
+                    $terms = get_terms('film-portfolio-categories');
+                    $count = count($terms);
+                    echo '<li class="film-item__port--main-nav film-item__port--main-nav--current"><a class="menu__link film-cat cat--active-film" href="javascript:void(0)" title="" data-filter="*">All</a></li>';
+                    if ( $count > 0 ){
+
+                      foreach ( $terms as $term ) {
+
+                        $termname = strtolower($term->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        echo '<li class="film-item__port--main-nav"><a class="menu__link film-cat" href="javascript:void(0)" title="" data-filter=".film-'.$termname.'">'.$term->name.'</a></li>';
+                      }
+                    }
+                    ?>
                  </ul>
                </nav>
              </div>
