@@ -19,6 +19,14 @@ body {
 h1 {
   font-family: "Bebas", Geneva, sans-serif; }
 
+a {
+  color: #000; }
+  a:hover, a:focus {
+    color: #848484; }
+    @supports (-ms-accelerator: true) {
+      a:hover, a:focus {
+        color: rgba(132, 132, 132, 0.5); } }
+
 .site-branding, .screen-reader-text {
   display: none; }
 

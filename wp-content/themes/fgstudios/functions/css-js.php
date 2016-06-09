@@ -50,7 +50,8 @@ function enqueue_css() {
 	wp_enqueue_style( 'animate' );
 
 	wp_register_style( 'bootstrap.min', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
-	wp_enqueue_style( 'bootstrap.min' );
+  wp_register_style( 'fgs_css', get_stylesheet_uri(), array( 'bootstrap.min' ));
+  wp_enqueue_style( 'fgs_css' );
 
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css');
 }

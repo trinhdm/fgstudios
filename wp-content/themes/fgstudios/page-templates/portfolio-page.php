@@ -113,7 +113,7 @@
 
                         $termname = strtolower($term->name);
                         $termname = str_replace(' ', '-', $termname);
-                        echo '<li class="film-item__port--main-nav"><a class="menu__link film-cat" href="javascript:void(0)" title="" data-filter=".film-'.$termname.'">'.$term->name.'</a></li>';
+                        echo '<li class="film-item__port--main-nav"><a class="menu__link film-cat" href="javascript:void(0)" title="" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
                       }
                     }
                     ?>
@@ -124,46 +124,40 @@
 
            <div id="film-grid">
              <div class="row">
-               <div class="col-md-4 portfolio-display film-item film-highlights">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-               </div>
+               <?php
+               /*
+               Query the post
+               */
+               $args = array( 'post_type' => 'films-portfolio', 'posts_per_page' => -1 );
+               $loop = new WP_Query( $args );
+               while ( $loop->have_posts() ) : $loop->the_post();
 
-               <div class="col-md-4 portfolio-display film-item film-shows film-weddings">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
-               </div>
+               /*
+               Pull category for each unique post using the ID
+               */
+               $terms = get_the_terms( $post->ID, 'film-portfolio-categories' );
+               if ( $terms && ! is_wp_error( $terms ) ) :
 
-               <div class="col-md-4 portfolio-display film-item film-highlights film-documentaries">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
-               </div>
-             </div>
+                 $links = array();
 
-             <div class="row">
-               <div class="col-md-4 portfolio-display film-item film-commercials">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
-               </div>
+                 foreach ( $terms as $term ) {
+                   $links[] = $term->name;
+                 }
 
-               <div class="col-md-4 portfolio-display film-item film-commercials film-documentaries film-shows">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
-               </div>
+                 $tax_links = join( " ", str_replace(' ', '-', $links));
+                 $tax = strtolower($tax_links);
+                 else :
+	                  $tax = '';
+                  endif;
 
-               <div class="col-md-4 portfolio-display film-item film-weddings">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
-               </div>
-             </div>
-
-             <div class="row">
-               <div class="col-md-4 portfolio-display film-item film-highlights film-shows">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
-               </div>
-
-               <div class="col-md-4 portfolio-display film-item film-shows film-weddings">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
-               </div>
-
-               <div class="col-md-4 portfolio-display film-item film-documentaries">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-               </div>
-             </div>
+                  /* Insert category name into portfolio-item class */
+                  echo '<div class="col-md-4 portfolio-display film-item '. $tax .'">';
+                  echo '<a href="'. get_permalink() .'" title="'. get_the_title() .'">';
+                  echo the_post_thumbnail();
+                  echo '</a>';
+                  echo '</div>';
+                endwhile; ?>
+              </div>
            </div>
 
            <span id="photos--main"></span>
@@ -174,12 +168,20 @@
              <div class="col-md-9 port--main-photo" id="port--main-nav">
                <nav class="menu photo__port--main-nav">
                  <ul class="menu__list">
-                   <li class="photo-item__port--main-nav photo-item__port--main-nav--current"><a class="menu__link photo-cat cat--active-photo" data-filter="*">All</a></li>
-                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-people">People</a></li>
-                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-landscape">Landscape</a></li>
-                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-commercials">Commercial</a></li>
-                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-events">Events</a></li>
-                   <li class="photo-item__port--main-nav"><a class="menu__link photo-cat" data-filter=".photo-booth">Photo Booth</a></li>
+                   <?php
+                    $terms = get_terms('photo-portfolio-categories');
+                    $count = count($terms);
+                    echo '<li class="photo-item__port--main-nav photo-item__port--main-nav--current"><a class="menu__link photo-cat cat--active-photo" href="javascript:void(0)" title="" data-filter="*">All</a></li>';
+                    if ( $count > 0 ){
+
+                      foreach ( $terms as $term ) {
+
+                        $termname = strtolower($term->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        echo '<li class="photo-item__port--main-nav"><a class="menu__link photo-cat" href="javascript:void(0)" title="" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
+                      }
+                    }
+                    ?>
                  </ul>
                </nav>
              </div>
@@ -187,45 +189,39 @@
 
            <div id="photo-grid">
              <div class="row">
-               <div class="col-md-4 portfolio-display photo-item photo-people">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-               </div>
+               <?php
+               /*
+               Query the post
+               */
+               $args = array( 'post_type' => 'photos-portfolio', 'posts_per_page' => -1 );
+               $loop = new WP_Query( $args );
+               while ( $loop->have_posts() ) : $loop->the_post();
 
-               <div class="col-md-4 portfolio-display photo-item photo-weddings photo-events">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
-               </div>
+               /*
+               Pull category for each unique post using the ID
+               */
+               $terms = get_the_terms( $post->ID, 'photo-portfolio-categories' );
+               if ( $terms && ! is_wp_error( $terms ) ) :
 
-               <div class="col-md-4 portfolio-display photo-item photo-booth photo-commercials">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
-               </div>
-             </div>
+                 $links = array();
 
-             <div class="row">
-               <div class="col-md-4 portfolio-display photo-item photo-landscape">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
-               </div>
+                 foreach ( $terms as $term ) {
+                   $links[] = $term->name;
+                 }
 
-               <div class="col-md-4 portfolio-display photo-item photo-landscape photo-booth photo-weddings">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
-               </div>
+                 $tax_links = join( " ", str_replace(' ', '-', $links));
+                 $tax = strtolower($tax_links);
+                 else :
+                    $tax = '';
+                  endif;
 
-               <div class="col-md-4 portfolio-display photo-item photo-events">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
-               </div>
-             </div>
-
-             <div class="row">
-               <div class="col-md-4 portfolio-display photo-item photo-people photo-weddings">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
-               </div>
-
-               <div class="col-md-4 portfolio-display photo-item photo-weddings photo-events">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
-               </div>
-
-               <div class="col-md-4 portfolio-display photo-item photo-commercials">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-               </div>
+                  /* Insert category name into portfolio-item class */
+                  echo '<div class="col-md-4 portfolio-display photo-item '. $tax .'">';
+                  echo '<a href="'. get_permalink() .'" title="'. get_the_title() .'">';
+                  echo the_post_thumbnail();
+                  echo '</a>';
+                  echo '</div>';
+                endwhile; ?>
              </div>
            </div>
 
@@ -237,13 +233,20 @@
              <div class="col-md-9 port--main-design" id="port--main-nav">
                <nav class="menu design__port--main-nav">
                  <ul class="menu__list">
-                   <li class="design-item__port--main-nav design-item__port--main-nav--current"><a class="menu__link design-cat cat--active-design" data-filter="*">All</a></li>
-                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-logos">Logos</a></li>
-                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-graphics">Graphics</a></li>
-                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-cards">Cards</a></li>
-                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-shirts">Shirts</a></li>
-                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-banners">Banners</a></li>
-                   <li class="design-item__port--main-nav"><a class="menu__link design-cat" data-filter=".design-other">Other Prints</a></li>
+                   <?php
+                    $terms = get_terms('design-portfolio-categories');
+                    $count = count($terms);
+                    echo '<li class="design-item__port--main-nav design-item__port--main-nav--current"><a class="menu__link design-cat cat--active-design" href="javascript:void(0)" title="" data-filter="*">All</a></li>';
+                    if ( $count > 0 ){
+
+                      foreach ( $terms as $term ) {
+
+                        $termname = strtolower($term->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        echo '<li class="design-item__port--main-nav"><a class="menu__link design-cat" href="javascript:void(0)" title="" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
+                      }
+                    }
+                    ?>
                  </ul>
                </nav>
              </div>
@@ -251,45 +254,39 @@
 
            <div id="design-grid">
              <div class="row">
-               <div class="col-md-4 portfolio-display design-item design-logos design-other">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-               </div>
+               <?php
+               /*
+               Query the post
+               */
+               $args = array( 'post_type' => 'designs-portfolio', 'posts_per_page' => -1 );
+               $loop = new WP_Query( $args );
+               while ( $loop->have_posts() ) : $loop->the_post();
 
-               <div class="col-md-4 portfolio-display design-item design-shirts design-banners">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
-               </div>
+               /*
+               Pull category for each unique post using the ID
+               */
+               $terms = get_the_terms( $post->ID, 'design-portfolio-categories' );
+               if ( $terms && ! is_wp_error( $terms ) ) :
 
-               <div class="col-md-4 portfolio-display design-item design-logos design-cards">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
-               </div>
-             </div>
+                 $links = array();
 
-             <div class="row">
-               <div class="col-md-4 portfolio-display design-item design-graphics">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo12.jpg' ?>">
-               </div>
+                 foreach ( $terms as $term ) {
+                   $links[] = $term->name;
+                 }
 
-               <div class="col-md-4 portfolio-display design-item design-other design-graphics design-cards design-shirts">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo3.jpg' ?>">
-               </div>
+                 $tax_links = join( " ", str_replace(' ', '-', $links));
+                 $tax = strtolower($tax_links);
+                 else :
+                    $tax = '';
+                  endif;
 
-               <div class="col-md-4 portfolio-display design-item design-banners">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo1.jpg' ?>">
-               </div>
-             </div>
-
-             <div class="row">
-               <div class="col-md-4 portfolio-display design-item design-other design-logos design-shirts">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo11.jpg' ?>">
-               </div>
-
-               <div class="col-md-4 portfolio-display design-item design-shirts design-banners">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo10.jpg' ?>">
-               </div>
-
-               <div class="col-md-4 portfolio-display design-item design-cards">
-                 <img src="<?php echo get_template_directory_uri() . '/assets/img/portfolio--demo8.jpg' ?>">
-               </div>
+                  /* Insert category name into portfolio-item class */
+                  echo '<div class="col-md-4 portfolio-display design-item '. $tax .'">';
+                  echo '<a href="'. get_permalink() .'" title="'. get_the_title() .'">';
+                  echo the_post_thumbnail();
+                  echo '</a>';
+                  echo '</div>';
+                endwhile; ?>
              </div>
            </div>
 

@@ -6,6 +6,18 @@ h1 {
   font-family: $headerFont;
 }
 
+a {
+  color: $black;
+
+  &:hover, &:focus {
+    color: $gray;
+
+    @supports (-ms-accelerator:true) {
+      color: rgba(132, 132, 132, 0.5);
+    }
+  }
+}
+
 .site-branding, .screen-reader-text {
   display: none;
 }
