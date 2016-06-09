@@ -51,15 +51,6 @@
       }
     });
   });
-
-
-  // add display none to grid
-  // click header
-  // display block to grid
-
-  // $('.films--header').on('click', function(){
-  //   $('#film-grid').removeClass('grid-displaynone').addClass('grid-display');
-  // });
 })( jQuery );
 </script>
 

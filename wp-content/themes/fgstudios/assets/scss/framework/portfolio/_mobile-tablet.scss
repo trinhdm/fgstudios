@@ -1,16 +1,16 @@
-// #port__mobile-tablet-display {
-//   float: none;
-//   padding: 0 35px;
-//
-//   @include desktop {
-//     // display: none;
-//   }
-//
-//   .panel-body {
-//     padding-top: 0;
-//   }
-//
-//   .port--main-nav .menu__list {
-//     float: left;
-//   }
-// }
+.port__mobile-tablet-display {
+  float: none;
+  padding: 0 35px;
+
+  @include desktop {
+    display: none;
+  }
+
+  .panel-body {
+    padding-top: 0;
+  }
+
+  .port--main-nav .menu__list {
+    float: left;
+  }
+}

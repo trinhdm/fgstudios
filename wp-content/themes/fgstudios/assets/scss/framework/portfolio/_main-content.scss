@@ -1,3 +1,9 @@
+#port__desktop-display {
+  @include phone {
+    display: none;
+  }
+}
+
 .port--main {
   padding: 0 35px 0 50px;
   float: right;         // to tempfix the fixed scroll sidebar
@@ -22,7 +28,7 @@
     display: none;
   }
 
-  #film-grid, #photo-grid #design-grid {
+  #film-grid, #photo-grid, #design-grid {
     width: calc(100% + 10px);
   }
 
