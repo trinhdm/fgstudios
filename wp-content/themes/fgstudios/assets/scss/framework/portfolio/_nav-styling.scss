@@ -5,6 +5,10 @@
     display: none;
   }
 
+  @include tablet {
+    display: none;
+  }
+
   span {
     color: $gray;
     background: transparent;

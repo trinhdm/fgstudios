@@ -3,6 +3,14 @@
   border: 20px solid $white;
   text-align: center;
 
+  @media screen and (max-width: 1024px) {
+    border: 7px solid $white;
+  }
+
+  @include tablet {
+    border: 0;
+  }
+
   @include phone {
     border: 0;
   }
@@ -30,6 +38,10 @@
 #films--trio, #photos--trio, #design--trio {
   @include phone {
     height: 200px;
+  }
+
+  @include tablet {
+    height: 250px;
   }
 }
 

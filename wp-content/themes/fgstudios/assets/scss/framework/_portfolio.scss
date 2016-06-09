@@ -1,7 +1,7 @@
 #portfolio {
   margin-top: 100px;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include phone {
     margin-top: 50px;
@@ -19,4 +19,5 @@
   @import "portfolio/main-content";
   @import "portfolio/nav-styling";
   @import "portfolio/sticky-nav";
+  @import "portfolio/mobile-tablet";
 }

@@ -1,4 +1,4 @@
-#port--main {
+.port--main {
   padding: 0 35px 0 50px;
   float: right;         // to tempfix the fixed scroll sidebar
 
@@ -8,13 +8,31 @@
     padding: 0 35px;
   }
 
-  #port--main-nav {
+  @include tablet {
+    float: none;
+    width: 100%;
+    padding: 0 35px;
+  }
+
+  .grid-display {
+    display: block;
+  }
+
+  .grid-displaynone {
+    display: none;
+  }
+
+  .port--main-nav {
     text-align: right;
     padding-top: 20px;
     z-index: 200;
 
     @include phone {
       text-align: left;
+    }
+
+    @include tablet {
+      padding-top: 14px;
     }
 
     a {
@@ -61,8 +79,16 @@
 	  }
 
     .film-item__port--main-nav,
-    .photo-item__port--main-nav {
+    .photo-item__port--main-nav,
+    .design-item__port--main-nav {
 	    display: block;
+    }
+
+    // alignment
+    .film-item__port--main-nav {
+      @include tablet {
+        padding-top: 3px;
+      }
     }
 
     .film-cat, .photo-cat, .design-cat {

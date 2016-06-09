@@ -51,6 +51,15 @@
       }
     });
   });
+
+
+  // add display none to grid
+  // click header
+  // display block to grid
+
+  // $('.films--header').on('click', function(){
+  //   $('#film-grid').removeClass('grid-displaynone').addClass('grid-display');
+  // });
 })( jQuery );
 </script>
 
@@ -61,16 +70,22 @@
   <main id="main" class="site-main" role="main">
      <div class="container" id="portfolio">
        <div class="row">
-         <a href="#films--main"><div class="col-xl-4 col-md-4 portfolio--trio" id="films--trio">
+         <a href="#films--main"><div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 portfolio--trio" id="films--trio">
            <span>Films</span>
          </div></a>
-         <a href="#photos--main"><div class="col-xl-4 col-md-4 portfolio--trio" id="photos--trio">
+         <a href="#photos--main"><div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 portfolio--trio" id="photos--trio">
            <span>Photos</span>
          </div></a>
-         <a href="#designs--main"><div class="col-xl-4 col-md-4 portfolio--trio" id="design--trio">
+         <a href="#designs--main"><div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 portfolio--trio" id="design--trio">
            <span>Designs</span>
          </div></a>
        </div>
+
+       <?php
+          $part1 = $_SERVER['DOCUMENT_ROOT'];
+          $part1 .= '/wp-content/themes/fgstudios/page-templates/portfolio-parts/mobile-tablet.php';
+          include_once($part1);
+       ?>
 
        <div class="row" style="margin-top: 20px">
          <div class="col-md-2" id="port--nav" data-spy="affix">
@@ -94,201 +109,27 @@
          </div>
 
 
-         <div class="col-md-10" id="port--main">
+         <div class="col-md-10 port--main" id="port__desktop-display">
            <span id="films--main"></span>
-           <div class="row">
-             <div class="col-md-3">
-               <h2 class="films--header nospacing">Films</h2>
-             </div>
-             <div class="col-md-9 nospacing port--main-film" id="port--main-nav">
-               <nav class="menu film__port--main-nav">
-                 <ul class="menu__list">
-                   <?php
-                    $terms = get_terms('film-portfolio-categories');
-                    $count = count($terms);
-                    echo '<li class="film-item__port--main-nav film-item__port--main-nav--current"><a class="menu__link film-cat cat--active-film" href="javascript:void(0)" title="" data-filter="*">All</a></li>';
-                    if ( $count > 0 ){
-
-                      foreach ( $terms as $term ) {
-
-                        $termname = strtolower($term->name);
-                        $termname = str_replace(' ', '-', $termname);
-                        echo '<li class="film-item__port--main-nav"><a class="menu__link film-cat" href="javascript:void(0)" title="" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
-                      }
-                    }
-                    ?>
-                 </ul>
-               </nav>
-             </div>
-           </div>
-
-           <div id="film-grid">
-             <div class="row">
-               <?php
-               /*
-               Query the post
-               */
-               $args = array( 'post_type' => 'films-portfolio', 'posts_per_page' => -1 );
-               $loop = new WP_Query( $args );
-               while ( $loop->have_posts() ) : $loop->the_post();
-
-               /*
-               Pull category for each unique post using the ID
-               */
-               $terms = get_the_terms( $post->ID, 'film-portfolio-categories' );
-               if ( $terms && ! is_wp_error( $terms ) ) :
-
-                 $links = array();
-
-                 foreach ( $terms as $term ) {
-                   $links[] = $term->name;
-                 }
-
-                 $tax_links = join( " ", str_replace(' ', '-', $links));
-                 $tax = strtolower($tax_links);
-                 else :
-	                  $tax = '';
-                  endif;
-
-                  /* Insert category name into portfolio-item class */
-                  echo '<div class="col-md-4 portfolio-display film-item '. $tax .'">';
-                  echo '<a href="'. get_permalink() .'" title="'. get_the_title() .'">';
-                  echo the_post_thumbnail();
-                  echo '</a>';
-                  echo '</div>';
-                endwhile; ?>
-              </div>
-           </div>
+           <?php
+              $films = $_SERVER['DOCUMENT_ROOT'];
+              $films .= '/wp-content/themes/fgstudios/page-templates/portfolio-parts/desktop-films.php';
+              include_once($films);
+           ?>
 
            <span id="photos--main"></span>
-           <div class="row">
-             <div class="col-md-3">
-               <h2 class="spacing photos--header">Photos</h2>
-             </div>
-             <div class="col-md-9 port--main-photo" id="port--main-nav">
-               <nav class="menu photo__port--main-nav">
-                 <ul class="menu__list">
-                   <?php
-                    $terms = get_terms('photo-portfolio-categories');
-                    $count = count($terms);
-                    echo '<li class="photo-item__port--main-nav photo-item__port--main-nav--current"><a class="menu__link photo-cat cat--active-photo" href="javascript:void(0)" title="" data-filter="*">All</a></li>';
-                    if ( $count > 0 ){
-
-                      foreach ( $terms as $term ) {
-
-                        $termname = strtolower($term->name);
-                        $termname = str_replace(' ', '-', $termname);
-                        echo '<li class="photo-item__port--main-nav"><a class="menu__link photo-cat" href="javascript:void(0)" title="" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
-                      }
-                    }
-                    ?>
-                 </ul>
-               </nav>
-             </div>
-           </div>
-
-           <div id="photo-grid">
-             <div class="row">
-               <?php
-               /*
-               Query the post
-               */
-               $args = array( 'post_type' => 'photos-portfolio', 'posts_per_page' => -1 );
-               $loop = new WP_Query( $args );
-               while ( $loop->have_posts() ) : $loop->the_post();
-
-               /*
-               Pull category for each unique post using the ID
-               */
-               $terms = get_the_terms( $post->ID, 'photo-portfolio-categories' );
-               if ( $terms && ! is_wp_error( $terms ) ) :
-
-                 $links = array();
-
-                 foreach ( $terms as $term ) {
-                   $links[] = $term->name;
-                 }
-
-                 $tax_links = join( " ", str_replace(' ', '-', $links));
-                 $tax = strtolower($tax_links);
-                 else :
-                    $tax = '';
-                  endif;
-
-                  /* Insert category name into portfolio-item class */
-                  echo '<div class="col-md-4 portfolio-display photo-item '. $tax .'">';
-                  echo '<a href="'. get_permalink() .'" title="'. get_the_title() .'">';
-                  echo the_post_thumbnail();
-                  echo '</a>';
-                  echo '</div>';
-                endwhile; ?>
-             </div>
-           </div>
+           <?php
+              $photos = $_SERVER['DOCUMENT_ROOT'];
+              $photos .= '/wp-content/themes/fgstudios/page-templates/portfolio-parts/desktop-photos.php';
+              include_once($photos);
+           ?>
 
            <span id="designs--main"></span>
-           <div class="row">
-             <div class="col-md-3">
-               <h2 class="spacing designs--header">Designs</h2>
-             </div>
-             <div class="col-md-9 port--main-design" id="port--main-nav">
-               <nav class="menu design__port--main-nav">
-                 <ul class="menu__list">
-                   <?php
-                    $terms = get_terms('design-portfolio-categories');
-                    $count = count($terms);
-                    echo '<li class="design-item__port--main-nav design-item__port--main-nav--current"><a class="menu__link design-cat cat--active-design" href="javascript:void(0)" title="" data-filter="*">All</a></li>';
-                    if ( $count > 0 ){
-
-                      foreach ( $terms as $term ) {
-
-                        $termname = strtolower($term->name);
-                        $termname = str_replace(' ', '-', $termname);
-                        echo '<li class="design-item__port--main-nav"><a class="menu__link design-cat" href="javascript:void(0)" title="" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
-                      }
-                    }
-                    ?>
-                 </ul>
-               </nav>
-             </div>
-           </div>
-
-           <div id="design-grid">
-             <div class="row">
-               <?php
-               /*
-               Query the post
-               */
-               $args = array( 'post_type' => 'designs-portfolio', 'posts_per_page' => -1 );
-               $loop = new WP_Query( $args );
-               while ( $loop->have_posts() ) : $loop->the_post();
-
-               /*
-               Pull category for each unique post using the ID
-               */
-               $terms = get_the_terms( $post->ID, 'design-portfolio-categories' );
-               if ( $terms && ! is_wp_error( $terms ) ) :
-
-                 $links = array();
-
-                 foreach ( $terms as $term ) {
-                   $links[] = $term->name;
-                 }
-
-                 $tax_links = join( " ", str_replace(' ', '-', $links));
-                 $tax = strtolower($tax_links);
-                 else :
-                    $tax = '';
-                  endif;
-
-                  /* Insert category name into portfolio-item class */
-                  echo '<div class="col-md-4 portfolio-display design-item '. $tax .'">';
-                  echo '<a href="'. get_permalink() .'" title="'. get_the_title() .'">';
-                  echo the_post_thumbnail();
-                  echo '</a>';
-                  echo '</div>';
-                endwhile; ?>
-             </div>
-           </div>
+           <?php
+              $designs = $_SERVER['DOCUMENT_ROOT'];
+              $designs .= '/wp-content/themes/fgstudios/page-templates/portfolio-parts/desktop-designs.php';
+              include_once($designs);
+           ?>
 
          </div>
        </div>

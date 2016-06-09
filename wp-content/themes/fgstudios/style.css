@@ -581,7 +581,7 @@ a {
 #portfolio {
   margin-top: 100px;
   padding: 0;
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media (min-width: 320px) and (max-width: 767px) {
     #portfolio {
       margin-top: 50px; } }
@@ -595,6 +595,12 @@ a {
     height: 470px;
     border: 20px solid #fff;
     text-align: center; }
+    @media screen and (max-width: 1024px) {
+      #portfolio .portfolio--trio {
+        border: 7px solid #fff; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #portfolio .portfolio--trio {
+        border: 0; } }
     @media (min-width: 320px) and (max-width: 767px) {
       #portfolio .portfolio--trio {
         border: 0; } }
@@ -618,6 +624,9 @@ a {
   @media (min-width: 320px) and (max-width: 767px) {
     #portfolio #films--trio, #portfolio #photos--trio, #portfolio #design--trio {
       height: 200px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #portfolio #films--trio, #portfolio #photos--trio, #portfolio #design--trio {
+      height: 250px; } }
   #portfolio #films--trio {
     background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%;
     -webkit-transition: all 0.3s ease;
@@ -660,22 +669,34 @@ a {
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-  #portfolio #port--main {
+  #portfolio .port--main {
     padding: 0 35px 0 50px;
     float: right; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #portfolio #port--main {
+      #portfolio .port--main {
         float: none;
         width: 100%;
         padding: 0 35px; } }
-    #portfolio #port--main #port--main-nav {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #portfolio .port--main {
+        float: none;
+        width: 100%;
+        padding: 0 35px; } }
+    #portfolio .port--main .grid-display {
+      display: block; }
+    #portfolio .port--main .grid-displaynone {
+      display: none; }
+    #portfolio .port--main .port--main-nav {
       text-align: right;
       padding-top: 20px;
       z-index: 200; }
       @media (min-width: 320px) and (max-width: 767px) {
-        #portfolio #port--main #port--main-nav {
+        #portfolio .port--main .port--main-nav {
           text-align: left; } }
-      #portfolio #port--main #port--main-nav a {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #portfolio .port--main .port--main-nav {
+          padding-top: 14px; } }
+      #portfolio .port--main .port--main-nav a {
         font-size: 70%;
         letter-spacing: 1px;
         color: #000;
@@ -685,7 +706,7 @@ a {
         margin: 0 10px;
         text-decoration: none;
         cursor: pointer; }
-        #portfolio #port--main #port--main-nav a:hover {
+        #portfolio .port--main .port--main-nav a:hover {
           color: #848484;
           text-decoration: none;
           -webkit-transition: all 0.3s ease;
@@ -693,7 +714,7 @@ a {
           -ms-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease; }
-      #portfolio #port--main #port--main-nav .menu__list {
+      #portfolio .port--main .port--main-nav .menu__list {
         float: right;
         position: relative;
         display: -webkit-flex;
@@ -704,13 +725,17 @@ a {
         padding: 0;
         list-style: none; }
         @media (min-width: 320px) and (max-width: 767px) {
-          #portfolio #port--main #port--main-nav .menu__list {
+          #portfolio .port--main .port--main-nav .menu__list {
             padding-bottom: 10px;
             float: left; } }
-      #portfolio #port--main #port--main-nav .film-item__port--main-nav,
-      #portfolio #port--main #port--main-nav .photo-item__port--main-nav {
+      #portfolio .port--main .port--main-nav .film-item__port--main-nav,
+      #portfolio .port--main .port--main-nav .photo-item__port--main-nav,
+      #portfolio .port--main .port--main-nav .design-item__port--main-nav {
         display: block; }
-      #portfolio #port--main #port--main-nav .film-cat, #portfolio #port--main #port--main-nav .photo-cat, #portfolio #port--main #port--main-nav .design-cat {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #portfolio .port--main .port--main-nav .film-item__port--main-nav {
+          padding-top: 3px; } }
+      #portfolio .port--main .port--main-nav .film-cat, #portfolio .port--main .port--main-nav .photo-cat, #portfolio .port--main .port--main-nav .design-cat {
         font-family: "HelveticaNeue", Verdana, sans-serif;
         display: block;
         cursor: pointer;
@@ -721,30 +746,30 @@ a {
         -webkit-touch-callout: none;
         -khtml-user-select: none;
         -webkit-tap-highlight-color: transparent; }
-        #portfolio #port--main #port--main-nav .film-cat:hover, #portfolio #port--main #port--main-nav .film-cat:focus, #portfolio #port--main #port--main-nav .photo-cat:hover, #portfolio #port--main #port--main-nav .photo-cat:focus, #portfolio #port--main #port--main-nav .design-cat:hover, #portfolio #port--main #port--main-nav .design-cat:focus {
+        #portfolio .port--main .port--main-nav .film-cat:hover, #portfolio .port--main .port--main-nav .film-cat:focus, #portfolio .port--main .port--main-nav .photo-cat:hover, #portfolio .port--main .port--main-nav .photo-cat:focus, #portfolio .port--main .port--main-nav .design-cat:hover, #portfolio .port--main .port--main-nav .design-cat:focus {
           outline: none; }
-      #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat,
-      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat,
-      #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat {
+      #portfolio .port--main .port--main-nav .film__port--main-nav .film-cat,
+      #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-cat,
+      #portfolio .port--main .port--main-nav .design__port--main-nav .design-cat {
         position: relative;
         display: block;
         color: #000;
         line-height: 2.25;
         -webkit-transition: color 0.3s;
         transition: color 0.3s; }
-      #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat:hover, #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat:focus,
-      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat:hover, #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat:focus,
-      #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat:hover, #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat:focus {
+      #portfolio .port--main .port--main-nav .film__port--main-nav .film-cat:hover, #portfolio .port--main .port--main-nav .film__port--main-nav .film-cat:focus,
+      #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-cat:hover, #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-cat:focus,
+      #portfolio .port--main .port--main-nav .design__port--main-nav .design-cat:hover, #portfolio .port--main .port--main-nav .design__port--main-nav .design-cat:focus {
         color: #848484; }
-      #portfolio #port--main #port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat,
-      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat,
-      #portfolio #port--main #port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat {
+      #portfolio .port--main .port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat,
+      #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat,
+      #portfolio .port--main .port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat {
         color: #000;
         font-family: "HNBold", Verdana, sans-serif;
         padding: 0; }
-      #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat::before,
-      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat::before,
-      #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat::before {
+      #portfolio .port--main .port--main-nav .film__port--main-nav .film-cat::before,
+      #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-cat::before,
+      #portfolio .port--main .port--main-nav .design__port--main-nav .design-cat::before {
         content: '';
         margin-bottom: -5px;
         position: absolute;
@@ -758,21 +783,21 @@ a {
         -webkit-transition: -webkit-transform 0.1s;
         transition: transform 0.1s; }
         @media (min-width: 320px) and (max-width: 767px) {
-          #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat::before,
-          #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat::before,
-          #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat::before {
+          #portfolio .port--main .port--main-nav .film__port--main-nav .film-cat::before,
+          #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-cat::before,
+          #portfolio .port--main .port--main-nav .design__port--main-nav .design-cat::before {
             height: 2.5px;
             margin-bottom: -2.5px; } }
-      #portfolio #port--main #port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat::before,
-      #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat::before,
-      #portfolio #port--main #port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat::before {
+      #portfolio .port--main .port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat::before,
+      #portfolio .port--main .port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat::before,
+      #portfolio .port--main .port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat::before {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
         -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s; }
-    #portfolio #port--main h2 {
+    #portfolio .port--main h2 {
       font-size: 26px;
       color: #848484;
       background: transparent;
@@ -781,31 +806,34 @@ a {
       display: inline-block;
       margin: 15px 0;
       padding: 1px; }
-    #portfolio #port--main #photos--main, #portfolio #port--main #designs--main {
+    #portfolio .port--main #photos--main, #portfolio .port--main #designs--main {
       margin: 3px; }
-    #portfolio #port--main .nospacing {
+    #portfolio .port--main .nospacing {
       margin-top: 0;
       padding-top: 0 !important; }
-    #portfolio #port--main .spacing {
+    #portfolio .port--main .spacing {
       margin: 10px 0 20px 0; }
       @media (min-width: 320px) and (max-width: 767px) {
-        #portfolio #port--main .spacing {
+        #portfolio .port--main .spacing {
           margin-bottom: 0; } }
-    #portfolio #port--main .portfolio-display {
+    #portfolio .port--main .portfolio-display {
       padding: 0;
       max-height: 200px; }
-      #portfolio #port--main .portfolio-display img {
+      #portfolio .port--main .portfolio-display img {
         width: 100%;
         max-height: 200px;
         object-fit: cover;
         opacity: .8; }
-      #portfolio #port--main .portfolio-display:hover {
+      #portfolio .port--main .portfolio-display:hover {
         background: #000; }
-        #portfolio #port--main .portfolio-display:hover img {
+        #portfolio .port--main .portfolio-display:hover img {
           opacity: .5; }
   #portfolio #port--nav {
     padding: 0 0 0 40px; }
     @media (min-width: 320px) and (max-width: 767px) {
+      #portfolio #port--nav {
+        display: none; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
       #portfolio #port--nav {
         display: none; } }
     #portfolio #port--nav span {

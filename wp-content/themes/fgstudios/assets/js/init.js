@@ -70,6 +70,43 @@ $(function() {
 });
 
 
+// for mobile
+$(function() {
+  var $grid = $('#film-grid__mobile-tablet').isotope({
+    itemSelector: '.film-item',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    // layoutMode: 'fitColumns',
+    masonry: {
+      columnWidth: '.col-md-4'
+    },
+    // only opacity for reveal/hide transition
+    containerStyle: {
+		  position: 'relative',
+		  overflow: 'visible'
+	  }
+  });
+
+  $('.film-cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+  });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
+});
+
+
 
 
 
