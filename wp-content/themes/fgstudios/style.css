@@ -22,7 +22,8 @@ h1 {
 a {
   color: #000; }
   a:hover, a:focus {
-    color: #848484; }
+    color: #848484;
+    text-decoration: none; }
     @supports (-ms-accelerator: true) {
       a:hover, a:focus {
         color: rgba(132, 132, 132, 0.5); } }
@@ -579,7 +580,11 @@ a {
 
 #portfolio {
   margin-top: 100px;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #portfolio {
+      margin-top: 50px; } }
   @media (min-width: 1900px) {
     #portfolio {
       width: 1800px; } }
@@ -590,6 +595,9 @@ a {
     height: 470px;
     border: 20px solid #fff;
     text-align: center; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #portfolio .portfolio--trio {
+        border: 0; } }
     #portfolio .portfolio--trio span {
       color: rgba(0, 0, 0, 0.75);
       background: rgba(255, 255, 255, 0.2);
@@ -607,6 +615,9 @@ a {
       -ms-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #portfolio #films--trio, #portfolio #photos--trio, #portfolio #design--trio {
+      height: 200px; } }
   #portfolio #films--trio {
     background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("assets/img/portfolio--film.jpg") no-repeat 95% 50%;
     -webkit-transition: all 0.3s ease;
@@ -652,10 +663,18 @@ a {
   #portfolio #port--main {
     padding: 0 35px 0 50px;
     float: right; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #portfolio #port--main {
+        float: none;
+        width: 100%;
+        padding: 0 35px; } }
     #portfolio #port--main #port--main-nav {
       text-align: right;
       padding-top: 20px;
       z-index: 200; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #portfolio #port--main #port--main-nav {
+          text-align: left; } }
       #portfolio #port--main #port--main-nav a {
         font-size: 70%;
         letter-spacing: 1px;
@@ -684,6 +703,10 @@ a {
         margin: 0;
         padding: 0;
         list-style: none; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          #portfolio #port--main #port--main-nav .menu__list {
+            padding-bottom: 10px;
+            float: left; } }
       #portfolio #port--main #port--main-nav .film-item__port--main-nav,
       #portfolio #port--main #port--main-nav .photo-item__port--main-nav {
         display: block; }
@@ -706,6 +729,7 @@ a {
         position: relative;
         display: block;
         color: #000;
+        line-height: 2.25;
         -webkit-transition: color 0.3s;
         transition: color 0.3s; }
       #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat:hover, #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat:focus,
@@ -716,7 +740,8 @@ a {
       #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat,
       #portfolio #port--main #port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat {
         color: #000;
-        font-family: "HNBold", Verdana, sans-serif; }
+        font-family: "HNBold", Verdana, sans-serif;
+        padding: 0; }
       #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat::before,
       #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat::before,
       #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat::before {
@@ -732,6 +757,12 @@ a {
         transform: scale3d(0, 1, 1);
         -webkit-transition: -webkit-transform 0.1s;
         transition: transform 0.1s; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          #portfolio #port--main #port--main-nav .film__port--main-nav .film-cat::before,
+          #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-cat::before,
+          #portfolio #port--main #port--main-nav .design__port--main-nav .design-cat::before {
+            height: 2.5px;
+            margin-bottom: -2.5px; } }
       #portfolio #port--main #port--main-nav .film__port--main-nav .film-item__port--main-nav--current .film-cat::before,
       #portfolio #port--main #port--main-nav .photo__port--main-nav .photo-item__port--main-nav--current .photo-cat::before,
       #portfolio #port--main #port--main-nav .design__port--main-nav .design-item__port--main-nav--current .design-cat::before {
@@ -757,6 +788,9 @@ a {
       padding-top: 0 !important; }
     #portfolio #port--main .spacing {
       margin: 10px 0 20px 0; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #portfolio #port--main .spacing {
+          margin-bottom: 0; } }
     #portfolio #port--main .portfolio-display {
       padding: 0;
       max-height: 200px; }
@@ -771,6 +805,9 @@ a {
           opacity: .5; }
   #portfolio #port--nav {
     padding: 0 0 0 40px; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #portfolio #port--nav {
+        display: none; } }
     #portfolio #port--nav span {
       color: #848484;
       background: transparent;

@@ -1,6 +1,10 @@
 #port--nav {
   padding: 0 0 0 40px;
 
+  @include phone {
+    display: none;
+  }
+
   span {
     color: $gray;
     background: transparent;

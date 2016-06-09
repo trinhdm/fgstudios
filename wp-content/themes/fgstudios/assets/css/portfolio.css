@@ -19,6 +19,9 @@
 #main-logo {
   height: 60px;
   z-index: 6; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #main-logo {
+      height: 37px; } }
 
 #fgsnav {
   top: 0;

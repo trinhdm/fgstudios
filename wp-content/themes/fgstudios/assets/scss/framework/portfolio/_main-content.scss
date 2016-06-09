@@ -2,10 +2,20 @@
   padding: 0 35px 0 50px;
   float: right;         // to tempfix the fixed scroll sidebar
 
+  @include phone {
+    float: none;
+    width: 100%;
+    padding: 0 35px;
+  }
+
   #port--main-nav {
     text-align: right;
     padding-top: 20px;
     z-index: 200;
+
+    @include phone {
+      text-align: left;
+    }
 
     a {
       font-size: 70%;
@@ -43,6 +53,11 @@
 	    margin: 0;
 	    padding: 0;
 	    list-style: none;
+
+      @include phone {
+        padding-bottom: 10px;
+        float: left;
+      }
 	  }
 
     .film-item__port--main-nav,
@@ -73,6 +88,7 @@
 	    position: relative;
 	    display: block;
 	    color: $black;
+      line-height: 2.25;
       -webkit-transition: color 0.3s;
       transition: color 0.3s;
     }
@@ -88,6 +104,7 @@
     .design__port--main-nav .design-item__port--main-nav--current .design-cat {
 	    color: $black;
       font-family: $bodyFontBold;
+      padding: 0;
     }
 
     .film__port--main-nav .film-cat::before,
@@ -105,6 +122,11 @@
       transform: scale3d(0, 1, 1);
       -webkit-transition: -webkit-transform 0.1s;
       transition: transform 0.1s;
+
+      @include phone {
+        height: 2.5px;
+        margin-bottom: -2.5px;
+      }
     }
 
     .film__port--main-nav .film-item__port--main-nav--current .film-cat::before,
@@ -143,6 +165,10 @@
 
   .spacing {
     margin: 10px 0 20px 0;
+
+    @include phone {
+      margin-bottom: 0;
+    }
   }
 
   .portfolio-display {

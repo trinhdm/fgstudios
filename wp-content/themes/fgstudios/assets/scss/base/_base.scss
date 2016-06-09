@@ -11,6 +11,7 @@ a {
 
   &:hover, &:focus {
     color: $gray;
+    text-decoration: none;
 
     @supports (-ms-accelerator:true) {
       color: rgba(132, 132, 132, 0.5);
