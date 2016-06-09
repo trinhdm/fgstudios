@@ -686,6 +686,8 @@ a {
       display: block; }
     #portfolio .port--main .grid-displaynone {
       display: none; }
+    #portfolio .port--main #film-grid, #portfolio .port--main #photo-grid #design-grid {
+      width: calc(100% + 5px); }
     #portfolio .port--main .port--main-nav {
       text-align: right;
       padding-top: 20px;

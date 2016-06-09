@@ -22,6 +22,10 @@
     display: none;
   }
 
+  #film-grid, #photo-grid #design-grid {
+    width: calc(100% + 5px);
+  }
+
   .port--main-nav {
     text-align: right;
     padding-top: 20px;

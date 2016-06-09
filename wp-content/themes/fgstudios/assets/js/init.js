@@ -37,7 +37,7 @@ $(function() {
 $(function() {
   var $grid = $('#film-grid').isotope({
     itemSelector: '.film-item',
-    percentPosition: true,
+    percentPosition: false,
     filter: '*',
     transitionDuration: '0.8s',
     // layoutMode: 'fitColumns',
