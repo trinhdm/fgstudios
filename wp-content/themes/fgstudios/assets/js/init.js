@@ -104,6 +104,23 @@ $(function() {
   $grid.imagesLoaded().progress( function() {
     $grid.isotope('layout');
   });
+
+
+
+  // THIS MAKES ISOTOPE WORK ON BOOTSTRAP TABS
+  // https://www.sitepoint.com/bootstrap-tabs-play-nice-with-masonry/
+  $('a[data-toggle=tab]').each(function () {
+  var $this = $(this);
+
+  $this.on('shown.bs.tab', function () {
+    $grid.imagesLoaded( function () {
+      $grid.masonry({
+          columnWidth: '.film-item',
+          itemSelector: '.film-item'
+        });
+      });
+    });
+  });
 });
 
 
