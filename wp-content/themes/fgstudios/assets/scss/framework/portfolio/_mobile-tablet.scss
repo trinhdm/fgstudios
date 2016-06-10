@@ -1,6 +1,6 @@
 .port__mobile-tablet-display {
   float: none;
-  padding: 0 35px;
+  padding: 0;
 
   @include desktop {
     display: none;
@@ -11,6 +11,6 @@
   }
 
   .port--main-nav .menu__list {
-    float: left;
+    float: none;
   }
 }

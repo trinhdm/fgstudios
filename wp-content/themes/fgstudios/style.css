@@ -680,7 +680,7 @@ a {
       #portfolio .port--main {
         float: none;
         width: 100%;
-        padding: 0 35px; } }
+        padding: 0; } }
     @media (min-width: 768px) and (max-width: 1023px) {
       #portfolio .port--main {
         float: none;
@@ -942,13 +942,13 @@ a {
       top: 20px; } }
   #portfolio .port__mobile-tablet-display {
     float: none;
-    padding: 0 35px; }
+    padding: 0; }
     @media (min-width: 1024px) {
       #portfolio .port__mobile-tablet-display {
         display: none; } }
     #portfolio .port__mobile-tablet-display .panel-body {
       padding-top: 0; }
     #portfolio .port__mobile-tablet-display .port--main-nav .menu__list {
-      float: left; }
+      float: none; }
 
 /*# sourceMappingURL=style.css.map */

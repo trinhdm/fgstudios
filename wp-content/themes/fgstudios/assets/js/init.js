@@ -148,6 +148,62 @@ $(function() {
 
 
 
+
+//  PHOTO for mobile
+$(function() {
+  var $grid = $('#photo-grid__mobile-tablet').isotope({
+    itemSelector: '.photo-item',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    layoutMode: 'vertical',
+    masonry: {
+      columnWidth: '.col-md-4'
+    },
+    // only opacity for reveal/hide transition
+    containerStyle: {
+		  position: 'relative',
+		  overflow: 'visible'
+	  }
+  });
+
+  $('.photo-cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+  });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
+
+
+  // THIS MAKES ISOTOPE WORK ON BOOTSTRAP TABS
+  // https://www.sitepoint.com/bootstrap-tabs-play-nice-with-masonry/
+  $('a[data-toggle=tab]').each(function () {
+  var $this = $(this);
+
+  $this.on('shown.bs.tab', function () {
+    $grid.imagesLoaded( function () {
+      $grid.masonry({
+          columnWidth: '.photo-item',
+          itemSelector: '.photo-item'
+        });
+      });
+    });
+  });
+});
+
+
+
+
 // portfolio: design isotope
 $(function() {
   var $grid = $('#design-grid').isotope({
@@ -181,6 +237,63 @@ $(function() {
 
   $grid.imagesLoaded().progress( function() {
     $grid.isotope('layout');
+  });
+});
+
+
+
+
+
+
+//  design for mobile
+$(function() {
+  var $grid = $('#design-grid__mobile-tablet').isotope({
+    itemSelector: '.design-item',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    layoutMode: 'vertical',
+    masonry: {
+      columnWidth: '.col-md-4'
+    },
+    // only opacity for reveal/hide transition
+    containerStyle: {
+		  position: 'relative',
+		  overflow: 'visible'
+	  }
+  });
+
+  $('.design-cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+  });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
+
+
+  // THIS MAKES ISOTOPE WORK ON BOOTSTRAP TABS
+  // https://www.sitepoint.com/bootstrap-tabs-play-nice-with-masonry/
+  $('a[data-toggle=tab]').each(function () {
+  var $this = $(this);
+
+  $this.on('shown.bs.tab', function () {
+    $grid.imagesLoaded( function () {
+      $grid.masonry({
+          columnWidth: '.design-item',
+          itemSelector: '.design-item'
+        });
+      });
+    });
   });
 });
 
