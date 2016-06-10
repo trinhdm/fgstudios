@@ -6,55 +6,11 @@
     get_header();
      ?>
 
-<script>
-(function($) {
-  $('ul.navbar-nav').addClass('navbar-right');
-  $('#fgsnav').removeClass('animate-delay3');
-  $('.logo--header').removeClass('animate-delay3');
-  $('#main-logo').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/logo-black.png' ?>');
-
-  $(function(){
-    $('#port--nav').affix({
-      offset: {
-        top: $('#port--nav').offset().top - 20,
-
-        bottom: ($('footer').outerHeight(true) +
-            $('.application').outerHeight(true)) +
-            40
-      }
-    });
-  });
-
-  $(function() {
-    var photosHeader = $('h2.photos--header').offset().top,     // original is -190
-    designsHeader = $('h2.designs--header').offset().top,
-    filmsHeader = $('h2.films--header').offset().top,
-    $window = $(window);
-
-    $window.scroll(function() {
-      if ( $window.scrollTop() >= photosHeader ) {
-        $('.arrow-films').removeClass('arrow-show').addClass('arrow-hide');
-        $('.arrow-photos').removeClass('arrow-hide').addClass('arrow-show');
-        $('.arrow-designs').removeClass('arrow-show').addClass('arrow-hide');
-      }
-
-      else if ( $window.scrollTop() >= filmsHeader ) {
-        $('.arrow-films').removeClass('arrow-hide').addClass('arrow-show');
-        $('.arrow-designs').removeClass('arrow-show').addClass('arrow-hide');
-        $('.arrow-photos').removeClass('arrow-show').addClass('arrow-hide');
-      }
-
-      if ( $window.scrollTop() >= designsHeader ) {
-        $('.arrow-films').removeClass('arrow-show').addClass('arrow-hide');
-        $('.arrow-designs').removeClass('arrow-hide').addClass('arrow-show');
-        $('.arrow-photos').removeClass('arrow-show').addClass('arrow-hide');
-      }
-    });
-  });
-})( jQuery );
-</script>
-
-
+<?php
+   $jsbegin = $_SERVER['DOCUMENT_ROOT'];
+   $jsbegin .= '/wp-content/themes/fgstudios/page-templates/portfolio-parts/js-beginning.php';
+   include_once($jsbegin);
+?>
 
 
 <div id="primary" class="content-area">
@@ -132,117 +88,10 @@
 get_sidebar();
 get_footer();
 ?>
-<script>
-
-// FOR FILM port--main-nav
-(function() {
-			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
-				var menuItems = menu.querySelectorAll('.menu__link'),
-					setCurrent = function(ev) {
-						ev.preventDefault();
-
-						var item = ev.target.parentNode; // li
-
-						// return if already current
-						if (classie.has(item, 'film-item__port--main-nav--current')) {
-							return false;
-						}
-						// remove current
-						classie.remove(menu.querySelector('.film-item__port--main-nav--current'), 'film-item__port--main-nav--current');
-						// set current
-						classie.add(item, 'film-item__port--main-nav--current');
-					};
-
-				[].slice.call(menuItems).forEach(function(el) {
-					el.addEventListener('click', setCurrent);
-				});
-			});
-
-			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-				new Clipboard(link);
-				link.addEventListener('click', function() {
-					classie.add(link, 'link-copy--animate');
-					setTimeout(function() {
-						classie.remove(link, 'link-copy--animate');
-					}, 300);
-				});
-			});
-		})(window);
 
 
-
-    // FOR PHOTO port--main-nav
-    (function() {
-    			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
-    				var menuItems = menu.querySelectorAll('.menu__link'),
-    					setCurrent = function(ev) {
-    						ev.preventDefault();
-
-    						var item = ev.target.parentNode; // li
-
-    						// return if already current
-    						if (classie.has(item, 'photo-item__port--main-nav--current')) {
-    							return false;
-    						}
-    						// remove current
-    						classie.remove(menu.querySelector('.photo-item__port--main-nav--current'), 'photo-item__port--main-nav--current');
-    						// set current
-    						classie.add(item, 'photo-item__port--main-nav--current');
-    					};
-
-    				[].slice.call(menuItems).forEach(function(el) {
-    					el.addEventListener('click', setCurrent);
-    				});
-    			});
-
-    			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-    				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-    				new Clipboard(link);
-    				link.addEventListener('click', function() {
-    					classie.add(link, 'link-copy--animate');
-    					setTimeout(function() {
-    						classie.remove(link, 'link-copy--animate');
-    					}, 300);
-    				});
-    			});
-    		})(window);
-
-
-
-        // FOR DESIGN port--main-nav
-        (function() {
-        			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
-        				var menuItems = menu.querySelectorAll('.menu__link'),
-        					setCurrent = function(ev) {
-        						ev.preventDefault();
-
-        						var item = ev.target.parentNode; // li
-
-        						// return if already current
-        						if (classie.has(item, 'design-item__port--main-nav--current')) {
-        							return false;
-        						}
-        						// remove current
-        						classie.remove(menu.querySelector('.design-item__port--main-nav--current'), 'design-item__port--main-nav--current');
-        						// set current
-        						classie.add(item, 'design-item__port--main-nav--current');
-        					};
-
-        				[].slice.call(menuItems).forEach(function(el) {
-        					el.addEventListener('click', setCurrent);
-        				});
-        			});
-
-        			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-        				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-        				new Clipboard(link);
-        				link.addEventListener('click', function() {
-        					classie.add(link, 'link-copy--animate');
-        					setTimeout(function() {
-        						classie.remove(link, 'link-copy--animate');
-        					}, 300);
-        				});
-        			});
-        		})(window);
-    </script>
+<?php
+   $jsend = $_SERVER['DOCUMENT_ROOT'];
+   $jsend .= '/wp-content/themes/fgstudios/page-templates/portfolio-parts/js-ending.php';
+   include_once($jsend);
+?>
