@@ -942,13 +942,35 @@ a {
       top: 20px; } }
   #portfolio .port__mobile-tablet-display {
     float: none;
-    padding: 0; }
+    padding: 0;
+    border: 0; }
     @media (min-width: 1024px) {
+      #portfolio .port__mobile-tablet-display {
+        display: none; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
       #portfolio .port__mobile-tablet-display {
         display: none; } }
     #portfolio .port__mobile-tablet-display .panel-body {
       padding-top: 0; }
+    #portfolio .port__mobile-tablet-display .port--main-nav {
+      padding-top: 15px; }
     #portfolio .port__mobile-tablet-display .port--main-nav .menu__list {
       float: none; }
+    #portfolio .port__mobile-tablet-display .mt-tabs {
+      padding: 0;
+      margin: 0;
+      border: 0; }
+    #portfolio .port__mobile-tablet-display .films--header, #portfolio .port__mobile-tablet-display .photos--header, #portfolio .port__mobile-tablet-display .designs--header {
+      color: #848484;
+      font-size: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 32.2vw;
+      background: transparent;
+      display: inline-block; }
+    #portfolio .port__mobile-tablet-display .active a h2 {
+      color: #000;
+      font-family: "HNBold", Verdana, sans-serif; }
 
 /*# sourceMappingURL=style.css.map */

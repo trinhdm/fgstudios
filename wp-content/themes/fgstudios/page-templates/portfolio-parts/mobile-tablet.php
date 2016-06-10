@@ -1,12 +1,18 @@
 <ul class="nav nav-tabs port__mobile-tablet-display">
-  <li class="active"><a data-target="#films" data-toggle="tab">Films</a></li>
-  <li><a data-target="#photos" data-toggle="tab">Photos</a></li>
-  <li><a data-target="#designs" data-toggle="tab">Designs</a></li>
+  <li class="active"><a data-target="#films" data-toggle="tab" class="mt-tabs">
+    <h2 class="films--header">Films</h2>
+  </a></li>
+  <li><a data-target="#photos" data-toggle="tab" class="mt-tabs">
+    <h2 class="photos--header">Photos</h2>
+  </a></li>
+  <li><a data-target="#designs" data-toggle="tab" class="mt-tabs">
+    <h2 class="designs--header">Designs</h2>
+  </a></li>
 </ul>
 
 <div class="tab-content port__mobile-tablet-display">
   <div class="tab-pane active port--main" id="films">
-    <div class="col-md-12 nospacing port--main-film port--main-nav">
+    <div class="col-md-12 port--main-film port--main-nav">
       <nav class="menu film__port--main-nav">
         <ul class="menu__list">
             <?php
@@ -69,7 +75,7 @@
 
   <!-- PHOTOS FOR MOBILE/TABLET -->
   <div class="tab-pane port--main" id="photos">
-    <div class="col-md-12 nospacing port--main-photo port--main-nav">
+    <div class="col-md-12 port--main-photo port--main-nav">
       <nav class="menu photo__port--main-nav">
         <ul class="menu__list">
             <?php

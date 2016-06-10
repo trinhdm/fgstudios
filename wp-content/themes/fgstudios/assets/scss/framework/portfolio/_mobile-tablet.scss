@@ -1,8 +1,13 @@
 .port__mobile-tablet-display {
   float: none;
   padding: 0;
+  border: 0;
 
   @include desktop {
+    display: none;
+  }
+
+  @include tablet {
     display: none;
   }
 
@@ -10,7 +15,33 @@
     padding-top: 0;
   }
 
+  .port--main-nav {
+    padding-top: 15px;
+  }
+
   .port--main-nav .menu__list {
     float: none;
+  }
+
+  .mt-tabs {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .films--header, .photos--header, .designs--header {
+    color: $gray;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 32.2vw;
+    background: transparent;
+    display: inline-block;
+  }
+
+  .active a h2 {
+    color: $black;
+    font-family: $bodyFontBold;
   }
 }
